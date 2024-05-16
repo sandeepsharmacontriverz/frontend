@@ -1,0 +1,386 @@
+"use client";
+import { useRouter } from "@lib/router-events";
+import { useState, useEffect, useRef } from "react";
+import CommonDataTable from "@components/core/Table";
+import useTranslations from "@hooks/useTranslation";
+import API from "@lib/Api";
+import useTitle from "@hooks/useTitle";
+import useRole from "@hooks/useRole";
+import Link from "@components/core/nav-link";
+import { useSearchParams } from "next/navigation";
+import moment from "moment";
+import User from "@lib/User";
+import { FaEye } from "react-icons/fa";
+import DataTable from "react-data-table-component";
+import checkAccess from "@lib/CheckAccess";
+import Loader from "@components/core/Loader";
+
+export default function Page() {
+  useTitle("Quality Parameter Detail Report");
+  const search = useSearchParams();
+  const id = search.get("id");
+  const [roleLoading,hasAccesss] = useRole();
+  const router = useRouter();
+  const spinnerId = User.MillId;
+  const [Access, setAccess] = useState<any>({});
+
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [data, setData] = useState<any>(null);
+
+  const [searchQuery, setSearchQuery] = useState<string>("");
+  const [count, setCount] = useState<any>();
+  const [page, setPage] = useState(1);
+  const [limit, setLimit] = useState(10);
+  const [showFilter, setShowFilter] = useState(false);
+  const [dataArray, setDataArray] = useState<Array<string>>([]);
+  const code = encodeURIComponent(searchQuery);
+
+
+  useEffect(() => {
+    if (!roleLoading && hasAccesss?.processor?.includes("Mill")) {
+      const access = checkAccess("Paddy Quality Parameters");
+      if (access) setAccess(access);
+    }
+  }, [roleLoading,hasAccesss]);
+
+  useEffect(() => {
+    if (id) {
+      fetchSingleCottonQuality();
+    }
+  }, [searchQuery, page, limit, id]);
+
+  const handleToggleFilter = (rowData: Array<string>) => {
+    setDataArray(rowData);
+    setShowFilter(!showFilter);
+  };
+
+  const fetchSingleCottonQuality = async () => {
+    try {
+      const res = await API.get(
+        `quality-parameter/get-value?id=${id}&search=${code}&page=${page}&limit=${limit}&pagination=true`
+      );
+      if (res.success) {
+        setData([res.data]);
+        const count = [res.data];
+        setCount(count?.length);
+        setIsLoaded(true);
+      }
+    } catch (error) {
+      console.log(error);
+      setCount(0);
+      setIsLoaded(true);
+    }
+  };
+
+  const updatePage = (page: number = 1, limitData: number = 10) => {
+    setPage(page);
+    setLimit(limitData);
+  };
+
+  const searchData = (e: any) => {
+    setSearchQuery(e.target.value);
+  };
+
+  const dateFormatter = (date: any) => {
+    const formatted = moment(date).format("DD-MM-YYYY");
+    return formatted;
+  };
+
+  const { translations, loading } = useTranslations();
+
+  if (loading) {
+    return <div>  <Loader /></div>;
+  }
+
+  const handleView = (url: string) => {
+    window.open(url, "_blank");
+  };
+
+  const DocumentPopup = ({ openFilter, dataArray, onClose }: any) => {
+    const popupRef = useRef<HTMLDivElement>(null);
+    const fileName = (item: any) => {
+      let file = item.split("file/")
+      return file ? file[1] : ""
+    }
+    const columnsArr: any = [
+      {
+        name: (<p className="text-[13px] font-medium">{translations?.common?.srNo}</p>),
+        width: "70px",
+        cell: (row: any, index: any) => index + 1,
+      },
+      {
+        name: (<p className="text-[13px] font-medium">{translations?.knitterInterface?.File}</p>),
+        cell: (row: any, index: any) => fileName(row),
+      },
+      {
+        name: (<p className="text-[13px] font-medium">Action</p>),
+        selector: (row: any) => (
+          <>
+            <div className="flex items-center">
+              <FaEye
+                size={18}
+                className="text-black  hover:text-blue-600 cursor-pointer mr-2"
+                onClick={() => handleView(row)}
+              />
+            </div>
+
+          </>
+        ),
+        center: true,
+        wrap: true,
+      }
+    ]
+
+    return (
+      <div>
+        {openFilter && (
+          <>
+            <div ref={popupRef} className="fixPopupFilters fixWidth flex h-full align-items-center w-auto z-10 fixed justify-center top-3 left-0 right-0 bottom-0 p-3 ">
+              <div className="bg-white border w-auto p-4 border-gray-300 shadow-md rounded-md">
+                <div className="flex justify-between align-items-center">
+                  <h3 className="text-lg pb-2">Documents</h3>
+                  <button
+                    className="text-[20px]"
+                    onClick={() => setShowFilter(!showFilter)}
+                  >
+                    &times;
+                  </button>
+                </div>
+                <div className="w-100 mt-0">
+                  <div className="customFormSet">
+                    <div className="w-100">
+                      <div className="row">
+                        <DataTable
+                          columns={columnsArr}
+                          data={dataArray}
+                          persistTableHead
+                          fixedHeader={true}
+                          noDataComponent={<p className="py-3 font-bold text-lg">No data available in table</p>}
+                          fixedHeaderScrollHeight="600px"
+                        />
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </>
+        )}
+
+      </div>
+    )
+  }
+
+  const columns = [
+    {
+      name: (<p className="text-[13px] font-medium">{translations.common.srNo}</p>),
+      cell: (row: any, index: any) => (page - 1) * limit + index + 1,
+      width: "70px",
+    },
+    {
+      name: (<p className="text-[13px] font-medium">{translations.millInterface.spinlotNo}</p>),
+      selector: (row: any) => row.lot_no,
+      wrap: true,
+
+    },
+    {
+      name: (<p className="text-[13px] font-medium">{translations.mandiInterface.reelLotNo}</p>),
+      selector: (row: any) => row.reel_lot_no,
+      wrap: true,
+    },
+    {
+      name: (<p className="text-[13px] font-medium">{translations.qualityParameter.labName}</p>),
+      selector: (row: any) => row.lab_name,
+      wrap: true,
+
+    },
+    {
+      name: (<p className="text-[13px] font-medium">{translations.qualityParameter.dateReport}</p>),
+      selector: (row: any) => dateFormatter(row.test_report),
+      wrap: true,
+
+    },
+    {
+      name: (<p className="text-[13px] font-medium">{translations.qualityParameter.sci}</p>),
+      selector: (row: any) => row.sci,
+      wrap: true,
+
+    },
+    {
+      name: (<p className="text-[13px] font-medium">{translations.qualityParameter.moisture}</p>),
+      selector: (row: any) => row.moisture,
+      wrap: true,
+      width: "120px"
+
+    },
+    {
+      name: (<p className="text-[13px] font-medium">{translations.qualityParameter.mic}</p>),
+      selector: (row: any) => row.mic,
+      wrap: true,
+
+    },
+    {
+      name: (<p className="text-[13px] font-medium">{translations.qualityParameter.mat}</p>),
+      selector: (row: any) => row.mat,
+      wrap: true,
+
+    },
+    {
+      name: (<p className="text-[13px] font-medium">{translations.qualityParameter.uhml}</p>),
+      selector: (row: any) => row.uhml,
+      wrap: true,
+
+    },
+    {
+      name: (<p className="text-[13px] font-medium">{translations.qualityParameter.ui}</p>),
+      selector: (row: any) => row.ui,
+      wrap: true,
+
+    },
+    {
+      name: (<p className="text-[13px] font-medium">{translations.qualityParameter.sf}</p>),
+      selector: (row: any) => row.sf,
+      wrap: true,
+
+    },
+    {
+      name: (<p className="text-[13px] font-medium">{translations.qualityParameter.str}</p>),
+      selector: (row: any) => row.str,
+      wrap: true,
+
+    },
+    {
+      name: (<p className="text-[13px] font-medium">{translations.qualityParameter.elg}</p>),
+      selector: (row: any) => row.elg,
+      wrap: true,
+
+    },
+    {
+      name: (<p className="text-[13px] font-medium">{translations.qualityParameter.rd}</p>),
+      selector: (row: any) => row.rd,
+      wrap: true,
+
+    },
+    {
+      name: (<p className="text-[13px] font-medium">{translations.qualityParameter.b}</p>),
+      selector: (row: any) => row.plusb,
+      wrap: true,
+
+    },
+    {
+      name: (<p className="text-[13px] font-medium">{translations.qualityParameter.document}</p>),
+      cell: (row: any) =>
+        row?.document && row?.document.length > 0 && (
+          <>
+            <FaEye
+              size={18}
+              className="text-black hover:text-blue-600 cursor-pointer mr-2"
+              onClick={() => handleToggleFilter(row?.document)}
+              title="Click to View All Files"
+            />
+          </>
+        ),
+      ignoreRowClick: true,
+      allowOverflow: true,
+      wrap: true,
+
+    },
+  ];
+
+  if (!roleLoading && !Access.view) {
+    return (
+      <div className="text-center w-full min-h-[calc(100vh-200px)] flex justify-center items-center">
+        <h3>You doesn't have Access of this Page.</h3>
+      </div>
+    );
+  }
+
+  if (!roleLoading && isLoaded  && Access.view) {
+    return (
+      <div className="">
+        <div>
+          {/* breadcrumb */}
+          <div className="breadcrumb-box">
+            <div className="breadcrumb-inner light-bg">
+              <div className="breadcrumb-left">
+                <ul className="breadcrum-list-wrap">
+                  <li>
+                    <Link href="/mill/dashboard" className="active">
+                      <span className="icon-home"></span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/mill/quality-parameter/cotton-quality-parameter" className="active">
+                    Paddy Quality Parameter
+                    </Link>
+                  </li>
+                  <li> Detail Report</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          {/* farmgroup start */}
+          <div className="farm-group-box">
+            <div className="farm-group-inner">
+              <div className="table-form">
+                <div className="table-minwidth w-100">
+                  {/* search */}
+                  <div className="search-filter-left ">
+                    <div className="search-bars mb-4">
+                      <label className="text-md font-bold">
+                        {translations.transactions.date}:
+                      </label>{" "}
+                      <span className="text-sm ml-5">
+                        {data &&
+                          data?.map((item: any) => {
+                            return dateFormatter(item?.sales?.date);
+                          })}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="search-filter-row">
+                    <div className="search-filter-left ">
+                      <div className="search-bars">
+                        <form className="form-group mb-0 search-bar-inner">
+                          <input
+                            type="text"
+                            className="form-control form-control-new jsSearchBar "
+                            placeholder={translations.common.search}
+                            value={searchQuery}
+                            onChange={searchData}
+                          />
+                          <button type="submit" className="search-btn">
+                            <span className="icon-search"></span>
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                    <div className="customButtonGroup">
+                      <button
+                        className="btn-outline-purple"
+                        onClick={() => router.push("/mill/quality-parameter/cotton-quality-parameter")}
+                      >
+                        Go Back
+                      </button>
+                    </div>
+
+                  </div>
+
+                  <DocumentPopup openFilter={showFilter} dataArray={dataArray} onClose={() => setShowFilter(false)} />
+
+                  <CommonDataTable
+                    data={data}
+                    columns={columns}
+                    count={count}
+                    updateData={updatePage}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}

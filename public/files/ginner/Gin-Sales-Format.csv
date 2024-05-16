@@ -1,0 +1,8 @@
+id,processId,ginnerId,ProgramId,seasonId,totalQty,noOfBales,chosenBale,lotNo,buyer,ShippingAddress,transactionViaTrader,transactionAgent,candyRate,rate,reelLotNo,despatchFrom,pressNo,status,weightloss,saleValue,invoiceNo,tcFile,contractFile,invoiceFile,deliveryNotes,transporterName,vehicleNo,lrblNo
+1,2,12,8,21,12,1,1,1,5,cbe,1,testing,123,12,BL-REEINTATGN06092023/131,here,765-348,Pending for QR Scanning,1,1,,1,1,1,1,1,1,1
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,s,,,,,,,,,,

@@ -1,0 +1,61 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap'); */
+
+@font-face {
+    font-family: 'futurabkbt';
+    src: url('../fonts/text-fonts/futurabkbt.eot');
+    src: url('../fonts/text-fonts/futurabkbt.eot') format('embedded-opentype'),
+         url('../fonts/text-fonts/futurabkbt.woff2') format('woff2'),
+         url('../fonts/text-fonts/futurabkbt.woff') format('woff'),
+         url('../fonts/text-fonts/futurabkbt.ttf') format('truetype'),
+         url('../fonts/text-fonts/futurabkbt.svg#futurabkbt') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'futuramdbt';
+    src: url('../fonts/text-fonts/futuramdbt.eot');
+    src: url('../fonts/text-fonts/futuramdbt.eot') format('embedded-opentype'),
+         url('../fonts/text-fonts/futuramdbt.woff2') format('woff2'),
+         url('../fonts/text-fonts/futuramdbt.woff') format('woff'),
+         url('../fonts/text-fonts/futuramdbt.ttf') format('truetype'),
+         url('../fonts/text-fonts/futuramdbt.svg#futuramdbt') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+ @font-face {
+    font-family: 'FuturaBold';
+    src: url('../fonts/text-fonts/FuturaBold.eot');
+    src: url('../fonts/text-fonts/FuturaBold.eot') format('embedded-opentype'),
+         url('../fonts/text-fonts/FuturaBold.woff2') format('woff2'),
+         url('../fonts/text-fonts/FuturaBold.woff') format('woff'),
+         url('../fonts/text-fonts/FuturaBold.ttf') format('truetype'),
+         url('../fonts/text-fonts/FuturaBold.svg#FuturaBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SourceSansPro-Regular';
+    src: url('../fonts/text-fonts/SourceSansPro-Regular.eot');
+    src: url('../fonts/text-fonts/SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/text-fonts/SourceSansPro-Regular.otf') format('otf'),
+    url('../fonts/text-fonts/SourceSansPro-Regular.svg#SourceSansPro-Regular') format('svg'),
+    url('../fonts/text-fonts/SourceSansPro-Regular.ttf') format('truetype'),
+    url('../fonts/text-fonts/SourceSansPro-Regular.woff') format('woff'),
+    url('../fonts/text-fonts/SourceSansPro-Regular.woff2') format('woff2');
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: 'FutureHvBt';
+    src: url('../fonts/text-fonts/FutuHv.eot');
+    src: url('../fonts/text-fonts/FutuHv.eot') format('embedded-opentype'),
+         url('../fonts/text-fonts/FutuHv.woff2') format('woff2'),
+         url('../fonts/text-fonts/FutuHv.woff') format('woff'),
+         url('../fonts/text-fonts/FutuHv.ttf') format('truetype'),
+         url('../fonts/text-fonts/FutuHv.svg#FutuHv') format('svg');
+}
+
