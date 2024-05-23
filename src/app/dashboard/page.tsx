@@ -140,19 +140,19 @@ export default function dashboard() {
   if (!roleLoading && hasAccess?.role?.userCategory?.category_name?.toLowerCase() === "superadmin" || hasAccess?.role?.userCategory?.category_name?.toLowerCase() === "admin") {
     return (
       <>
-       <Head>
-        <title>{metaData.title}</title>
-        <meta name="description" content={metaData.description} />
-        <meta property="og:title" content={metaData.ogTitle} />
-        <meta property="og:description" content={metaData.ogDescription} />
-        <meta property="og:url" content={metaData.ogUrl} />
-        <meta property="og:image" content={metaData.ogImage} />
-        <meta name="twitter:title" content={metaData.twitterTitle} />
-        <meta name="twitter:description" content={metaData.twitterDescription} />
+        <Head>
+        <title>Rice Traceability | Dashboard</title>
+        <meta name="description" content="sffdfsf" />
+        <meta property="og:title" content="tracebale" />
+        <meta property="og:description" content="I'm superman" />
+        <meta property="og:url" content="https://frontend-eta-ebon-62.vercel.app/dashboard" />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1715942163404-b44e0808536b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+        <meta name="twitter:title" content="tracebale" />
+        <meta name="twitter:description" content="I'm superman" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content={metaData.twitterSite} />
-        <meta name="twitter:image" content={metaData.twitterImage} />
-        <meta name="twitter:creator" content={metaData.twitterCreator} />
+        <meta name="twitter:site" content="@lighter_app" />
+        <meta name="twitter:image" content="https://images.unsplash.com/photo-1715942163404-b44e0808536b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+        <meta name="twitter:creator" content="@lighter_app" />
       </Head>
       <div>
         <div className="breadcrumb-box">
