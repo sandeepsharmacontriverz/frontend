@@ -107,18 +107,7 @@ export default function RootLayout({
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
           <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
-          <title key="title">tracebale</title>
-            <meta key="keywords" name="keywords" content={`tracebale, tracebale.com,`} />
-            <meta key="description" name="description" content="sffdfsf" />
-            <meta key="og-title" property="og:title" content="tracebale" />
-            <meta key="og-description" property="og:description" content="I'm superman" />
-            <meta key="og-url" property="og:url" content={`https://newtraceable.com/`} />
-            <meta key="twitter-title" name="twitter:title" content="tracebale" />
-            <meta key="twitter-description" name="twitter:description" content="I'm superman" />
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:site" content="@lighter_app" />
-            <meta name="twitter:image" content={`/images/logo.png`} />
-            <meta name="twitter:creator" content="@lighter_app" />
+      
           {/* <link rel="stylesheet" href="/css/external.css" /> */}
           <Script src="/js/jquery.js" strategy="afterInteractive" />
         <Script
@@ -204,4 +193,27 @@ export default function RootLayout({
       </html>
     );
   }
+}
+
+export async function getStaticProps() {
+  // Example data fetching
+  const metaData = {
+    title: "Rice Traceability | Dashboard",
+    description: "sffdfsf",
+    ogTitle: "tracebale",
+    ogDescription: "I'm superman",
+    ogUrl: "https://newtraceable.com/",
+    ogImage: "https://images.unsplash.com/photo-1715698576283-d6ee92b7157a?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    twitterTitle: "tracebale",
+    twitterDescription: "I'm superman",
+    twitterSite: "@lighter_app",
+    twitterImage: "https://images.unsplash.com/photo-1715698576283-d6ee92b7157a?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    twitterCreator: "@lighter_app"
+  };
+
+  return {
+    props: {
+      metaData,
+    },
+  };
 }

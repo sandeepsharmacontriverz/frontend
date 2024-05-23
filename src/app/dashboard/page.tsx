@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import NavLink from "@components/core/nav-link";
-
+import Head from "next/head";
 import useRole from "@hooks/useRole";
 import useTitle from "@hooks/useTitle";
 import useTranslations from "@hooks/useTranslation";
@@ -139,6 +139,21 @@ export default function dashboard() {
 
   if (!roleLoading && hasAccess?.role?.userCategory?.category_name?.toLowerCase() === "superadmin" || hasAccess?.role?.userCategory?.category_name?.toLowerCase() === "admin") {
     return (
+      <>
+       <Head>
+        <title>{metaData.title}</title>
+        <meta name="description" content={metaData.description} />
+        <meta property="og:title" content={metaData.ogTitle} />
+        <meta property="og:description" content={metaData.ogDescription} />
+        <meta property="og:url" content={metaData.ogUrl} />
+        <meta property="og:image" content={metaData.ogImage} />
+        <meta name="twitter:title" content={metaData.twitterTitle} />
+        <meta name="twitter:description" content={metaData.twitterDescription} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content={metaData.twitterSite} />
+        <meta name="twitter:image" content={metaData.twitterImage} />
+        <meta name="twitter:creator" content={metaData.twitterCreator} />
+      </Head>
       <div>
         <div className="breadcrumb-box">
           <div className="breadcrumb-inner light-bg">
@@ -272,6 +287,7 @@ export default function dashboard() {
           series={series}
         />
       </div>
+      </>
     );
   }
 }
