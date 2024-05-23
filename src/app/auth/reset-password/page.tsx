@@ -13,16 +13,17 @@ const ResetPassword = () => {
   const router = useRouter();
   const { setLoading }: any = useLoading();
   const searchParams = useSearchParams()
-
   const search = searchParams.get('token')
-
+  
   const formFields = [
     { name: "password", type: "password", placeholder: "New Password", title: "Create a Password" },
     { name: "confirmPassword", type: "password", placeholder: "Confirm Password", title: "Confirm Password" },
   ];
   const [errorMessage, setErrorMessage] = useState<{ [key: string]: string | null }>({});
+  const [submitLoader, setSubmitLoader] = useState(false);
 
   const handleFormSubmit = async (formData: { [key: string]: any }) => {
+    setSubmitLoader(true);
     // Perform form submission logic or API request here
     const payload = {
       token: search,
@@ -45,6 +46,7 @@ const ResetPassword = () => {
             if (result.error.code === "ERR_AUTH_WRONG_TOKEN") {
               toasterError("Oops! Looks like this link has expired. Please request a fresh one.", 3000, "id")
             }
+            setSubmitLoader(false);
           }
         }
         else {
@@ -54,12 +56,15 @@ const ResetPassword = () => {
             ...errorMessage,
             [field]: res,
           });
+          setSubmitLoader(false);
         }
       }
       else {
-        toasterError("Fields cannot be empty", 3000, "id")
+        toasterError("Fields cannot be empty", 3000, "id");
+        setSubmitLoader(false);
       }
     } catch (error: any) {
+      setSubmitLoader(false);
 
     }
   };
@@ -73,6 +78,7 @@ const ResetPassword = () => {
         fields={formFields}
         buttonText="Submit"
         onSubmit={handleFormSubmit}
+        submitLoader={submitLoader}
         error={errorMessage}
       />
 

@@ -1,4 +1,5 @@
 "use client";
+import Loader from "@components/core/Loader";
 import Link from "@components/core/nav-link";
 import React, { useState, useEffect } from "react";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
@@ -24,6 +25,7 @@ interface FormProps {
   buttonText: string;
   linkText?: any;
   linkUrl?: any;
+  submitLoader?: boolean;
   error?: { [key: string]: string | null };
   onSubmit: (formData: { [key: string]: any }) => void;
 }
@@ -37,6 +39,7 @@ const Form: React.FC<FormProps> = ({
   buttonText,
   linkText,
   linkUrl,
+  submitLoader,
   error,
   onSubmit,
 }) => {
@@ -136,6 +139,16 @@ const Form: React.FC<FormProps> = ({
                     </div>
                   )}
                   <div className="btn-controls">
+                  {submitLoader ? 
+                    <button
+                    className="btn btn-purple w-100 flex items-center"
+                    type="button"
+                    disabled={isSubmitDisabled}
+                    onClick={handleSubmit}
+                  >
+                    <Loader height={8}/>
+                  </button>
+                  :
                     <button
                       className="btn btn-purple w-100"
                       type="button"
@@ -144,6 +157,7 @@ const Form: React.FC<FormProps> = ({
                     >
                       {buttonText}
                     </button>
+                  }
                   </div>
                   {linkText === "Back" &&
                     <div className="back-link">

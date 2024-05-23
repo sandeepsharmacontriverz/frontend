@@ -16,7 +16,7 @@ const Login = () => {
   ];
   const [showLoginProcessor, setShowLoginProcessor] = useState<any>(false);
   const [data, setData] = useState<any>([]);
-
+  const [submitLoader, setSubmitLoader] = useState(false);
 
 // const getCookie = (name:string) => {
 //   console.log(document.cookie)
@@ -33,6 +33,7 @@ const Login = () => {
   const [errorMessage, setErrorMessage] = useState<{ [key: string]: string | null }>({});
   const handleFormSubmit = async (formData: { [key: string]: any }) => {
   //  if(authUser === formData.username ){
+    setSubmitLoader(true);
     try {
       const result = await API.post(
         "auth/signin",
@@ -45,10 +46,12 @@ const Login = () => {
           return ;
         }
         setLoading(true);
+        setSubmitLoader(false);
         localStorage.setItem("accessToken", result.data.accessToken)
         setData(result?.data);
         if (result.data.processor.length > 1) {
           setLoading(false);
+          setSubmitLoader(false);
           setShowLoginProcessor(true)
         } else {
           if (result.data.isAgreementAgreed) {
@@ -74,11 +77,12 @@ const Login = () => {
           ...errorMessage,
           [field]: res,
         });
+        setSubmitLoader(false);
       }
 
     } catch (error) {
       console.log(error);
-
+      setSubmitLoader(false);
     }
   // }
   // else{
@@ -152,6 +156,7 @@ const Login = () => {
         linkText="Forgot Password?"
         linkUrl="/auth/forgot-password"
         onSubmit={handleFormSubmit}
+        submitLoader={submitLoader}
         error={errorMessage}
       />
       

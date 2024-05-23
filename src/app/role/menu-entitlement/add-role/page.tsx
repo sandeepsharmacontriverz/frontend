@@ -103,7 +103,7 @@ export default function addMenuEntitlement() {
     const res = await API.get("user/get-user-categories");
     if (res.success) {
       const category = res.data?.filter((val: any) => {
-        return val.category_name === 'Superadmin' || val.category_name === "Brand" || val.category_name === 'Admin' || val.category_name === 'Mandi' || val.category_name === 'Mill' || val.category_name === 'Third_Party_Inspection' || val.category_name === 'Lab' || val.category_name === 'Container_Management_System' || val.category_name === 'Garment' || val.category_name === 'Fabric' || val.category_name === "Developer"
+        return val.category_name === 'Superadmin' || val.category_name === "Brand" || val.category_name === 'Admin' || val.category_name === 'Mandi' || val.category_name === 'Mill' || val.category_name === 'Third_Party_Inspection' || val.category_name === 'Lab' || val.category_name === 'Container_Management_System' || val.category_name === 'Farm' || val.category_name === 'Garment' || val.category_name === 'Fabric' || val.category_name === "Developer"
       })
       setUserCategory(category);
     }
@@ -638,7 +638,7 @@ export default function addMenuEntitlement() {
             menuShouldScrollIntoView={false}
             isClearable
             placeholder="Select User Category"
-            className="z-[2] dropDownFixes rounded-md formDropDown mt-1 text-sm borderBottom"
+            className="z-[1] dropDownFixes rounded-md formDropDown mt-1 text-sm borderBottom"
             options={(userCategory || []).map(({ id, category_name }: any) => ({
               label: category_name,
               value: id,
@@ -664,7 +664,7 @@ export default function addMenuEntitlement() {
                 menuShouldScrollIntoView={false}
                 isClearable
                 placeholder="Select Brand"
-                className="z-[2] dropDownFixes rounded-md formDropDown mt-1 text-sm borderBottom"
+                className="z-[1] dropDownFixes rounded-md formDropDown mt-1 text-sm borderBottom"
                 options={(brandList || []).map(({ id, brand_name }: any) => ({
                   label: brand_name,
                   value: id,
@@ -739,6 +739,7 @@ export default function addMenuEntitlement() {
         <DataTable
           persistTableHead
           fixedHeader={true}
+          className="z-0"
           noDataComponent={""}
           fixedHeaderScrollHeight={"500px"}
           columns={columns}

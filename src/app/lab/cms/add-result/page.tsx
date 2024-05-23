@@ -16,8 +16,8 @@ import { useRouter } from '@lib/router-events';
 import { GrAttachment } from "react-icons/gr";
 import { FaAngleDown, FaAngleRight } from "react-icons/fa";
 
-const AddMillResult = () => {
-    useTitle("Add Mill Result Details");
+const AddCmsResult = () => {
+    useTitle("Add CMS Result Details");
 
     const router = useRouter();
     const [roleLoading] = useRole();
@@ -26,7 +26,7 @@ const AddMillResult = () => {
     const searchParams = useSearchParams();
     const id = searchParams.get("id");
 
-    const [labMill, setLabMill] = useState<any>({});
+    const [labCms, setLabCms] = useState<any>({});
     const [sampleResults, setSampleResults] = useState<any>("");
     const [uploadReports, setUploadReports] = useState<Array<string>>([]);
     const [uploadReportFileNames, setUploadReportFileNames] = useState<Array<string>>([]);
@@ -41,11 +41,11 @@ const AddMillResult = () => {
         return formatted;
     };
 
-    const fetchLabMill = async () => {
+    const fetchLabCms = async () => {
         try {
-            const res = await API.get(`third-party-sample/get-rice-sample?id=${id}`);
+            const res = await API.get(`third-party-sample/get-cms-sample?id=${id}`);
             if (res.success) {
-                setLabMill(res.data);
+                setLabCms(res.data);
             }
         } catch (error) {
             console.log(error);
@@ -134,17 +134,18 @@ const AddMillResult = () => {
             }
      
             if (!isError) {
-                const url = "lab-report";
+                const url = "lab-report/add-cms-sample-result";
                 const mainFormData = {
                     id: id,
                     sampleReports: uploadReports,
                     sampleResult: sampleResults
                 };
+         
                 const mainResponse = await API.post(url, mainFormData);
 
                 if (mainResponse.success) {
                     toasterSuccess("Results added successfully");
-                    router.push("/lab/mill");
+                    router.push("/lab/cms");
                 }
             } else {
                 setErrors(newErrors);
@@ -159,7 +160,7 @@ const AddMillResult = () => {
 
     useEffect(() => {
         if (id) {
-            fetchLabMill();
+            fetchLabCms();
         }
     }, [id]);
 
@@ -167,44 +168,56 @@ const AddMillResult = () => {
         return (<div><Loader /></div>);
     }
 
-    const renderMillLabInformation = () => {
+    const renderCmsLabInformation = () => {
         return (
             <div className="details-list-group mg-t-44">
                 <ul className="detail-list">
-                    <li className="item">
-                        <span className="label">Mill Name:</span>
+                <li className="item">
+                        <span className="label">Third Party Name:</span>
                         <span className="val">
-                            {labMill?.mill?.name || ""}
+                            {labCms?.thirdparty?.name || ""}
+                        </span>
+                    </li>
+                    <li className="item">
+                        <span className="label">Cms Name:</span>
+                        <span className="val">
+                            {labCms?.cms?.name || ""}
                         </span>
                     </li>
                     <li className="item">
                         <span className="label">Lot No:</span>
                         <span className="val">
-                            {labMill?.lot_no}
+                            {labCms?.lot_no}
+                        </span>
+                    </li>
+                    <li className="item">
+                        <span className="label">Container Name:</span>
+                        <span className="val">
+                            {labCms?.container?.container_name}
+                        </span>
+                    </li>
+                    <li className="item">
+                        <span className="label">Container No:</span>
+                        <span className="val">
+                            {labCms?.container?.container_no}
                         </span>
                     </li>
                     <li className="item">
                         <span className="label">Date of sample collection:</span>
                         <span className="val">
-                            {labMill?.sample_date ? dateFormatter(labMill.sample_date) : ""}
+                            {labCms?.sample_date ? dateFormatter(labCms.sample_date) : ""}
                         </span>
                     </li>
-                    {/* <li className="item">
-                        <span className="label">Data of sample dispatch:</span>
-                        <span className="val">
-                            {labMill?.data_of_sample_dispatch}
-                        </span>
-                    </li> */}
                     <li className="item">
                         <span className="label">Lab name:</span>
                         <span className="val">
-                            {labMill?.lab?.name}
+                            {labCms?.lab?.name}
                         </span>
                     </li>
                     <li className="item">
                         <span className="label">Expected date:</span>
                         <span className="val">
-                            {labMill?.expected_date ? dateFormatter(labMill.expected_date) : ""}
+                            {labCms?.expected_date ? dateFormatter(labCms.expected_date) : ""}
                         </span>
                     </li>
                 </ul>
@@ -284,8 +297,8 @@ const AddMillResult = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/lab/mill" className="active">
-                                        Mill
+                                    <Link href="/lab/cms" className="active">
+                                        Container Management System
                                     </Link>
                                 </li>
                                 <li>Add Result</li>
@@ -300,14 +313,14 @@ const AddMillResult = () => {
                             <div className='w-full'>
                                 <Accordian
                                     title={"General Information"}
-                                    content={renderMillLabInformation()}
+                                    content={renderCmsLabInformation()}
                                     firstSign={<FaAngleDown color="white" />}
                                     secondSign={<FaAngleRight color="white" />}
                                 />
                             </div>
                         </div>
                         <div className='mt-2'>
-                            <CommonDataTable columns={columns} data={labMill.code ? [labMill] : []} pagination={false} count={[labMill].length} />
+                            <CommonDataTable columns={columns} data={labCms.code ? [labCms] : []} pagination={false} count={[labCms].length} />
                         </div>
                     </div>
                     <div className='row mt-4'>
@@ -362,7 +375,7 @@ const AddMillResult = () => {
                         </button>
                         <button
                             className="btn-outline-purple"
-                            onClick={() => router.push('/lab/mill')}
+                            onClick={() => router.push('/lab/cms')}
                         >
                             {translations?.common?.cancel}
                         </button>
@@ -373,4 +386,4 @@ const AddMillResult = () => {
     }
 }
 
-export default AddMillResult;
+export default AddCmsResult;

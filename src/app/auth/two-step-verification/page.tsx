@@ -7,6 +7,7 @@ import Link from "next/link";
 import InputCode from "@components/core/InputCode";
 import { toasterError, toasterSuccess } from "@components/core/Toaster";
 import { useLoading } from "context/LoadingContext";
+import Loader from "@components/core/Loader";
 
 const TwoStepVerification: NextPage = () => {
   const searchParams = useSearchParams()
@@ -26,6 +27,7 @@ const TwoStepVerification: NextPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [showLoginProcessor, setShowLoginProcessor] = useState<any>(false);
   const [data, setData] = useState<any>([]);
+  const [submitLoader, setSubmitLoader] = useState(false);
 
   useEffect(() => {
     if (countdownActive && countdown > 0) {
@@ -73,6 +75,7 @@ const TwoStepVerification: NextPage = () => {
   }
 
   const handleFormSubmit = async () => {
+    setSubmitLoader(true);
     if(formData.length > 0){
       try {
         const result = await API.post(
@@ -99,9 +102,11 @@ const TwoStepVerification: NextPage = () => {
         }
         else {
           toasterError('Invalid or expired OTP!', 3000, 1)
+          setSubmitLoader(false);
         }
       } catch (error) {
         console.log(error)
+        setSubmitLoader(false);
       }
     }
   };
@@ -137,14 +142,25 @@ const TwoStepVerification: NextPage = () => {
 
 
                   <div className="btn-controls">
-                    <button
-                      className="btn btn-purple w-100"
+                    {submitLoader ?
+                      <button
+                      className="btn btn-purple w-100 flex items-center"
                       type="button"
                       disabled={isSubmitDisabled}
                       onClick={handleFormSubmit}
                     >
+                      <Loader height={8}/>
+                    </button>
+                    :
+                    <button
+                    className="btn btn-purple w-100"
+                    type="button"
+                    disabled={isSubmitDisabled}
+                    onClick={handleFormSubmit}
+                    >
                       Verify
                     </button>
+                    }
                   </div>
 
                   <div className="back-link">

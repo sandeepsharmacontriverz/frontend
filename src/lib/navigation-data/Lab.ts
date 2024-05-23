@@ -28,6 +28,14 @@ export default class User {
             size: 20,
             path: "/lab/mill",
             isOpen: false,
+        },
+        {
+            item: "CMS",
+            id: "CMS",
+            icon: ImTree,
+            size: 20,
+            path: "/lab/cms",
+            isOpen: false,
         }
     ];
 }

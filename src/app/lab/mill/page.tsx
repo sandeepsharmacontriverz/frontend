@@ -11,6 +11,7 @@ import CommonDataTable from '@components/core/Table';
 import API from '@lib/Api';
 import User from '@lib/User';
 import { BiFilterAlt } from "react-icons/bi";
+import Multiselect from 'multiselect-react-dropdown';
 
 const LabMill = () => {
     useTitle("Mill Details");
@@ -28,9 +29,14 @@ const LabMill = () => {
     const [isAdmin, setIsAdmin] = useState<boolean>(false);
 
     const [mills, setMills] = useState<Array<any>>([]);
+    const [thirdParty, setThirdParty] = useState<Array<any>>([]);
+    const [program, setProgram] = useState<Array<any>>([]);
+
     const [showFilter, setShowFilter] = useState<boolean>(false);
     const [appliedFilters, setAppliedFilters] = useState<any>({
-        mill_id: ""
+        mill_id: [],
+        third_party: [],
+        program_id: []
     });
     const [isClear, setIsClear] = useState(false);
 
@@ -49,8 +55,22 @@ const LabMill = () => {
     };
 
     const fetchMills = async () => {
+        const url = `lab/get-lab?id=${labId}`;
         try {
-            const res = await API.get("mill");
+            const response = await API.get(url);
+            if (response?.data?.brand?.length > 0) {
+                getMill(response?.data?.brand);
+                getThirdParty(response?.data?.brand);
+                getProgram(response?.data?.brand)
+            }
+        } catch (error) {
+            console.log(error, "error");
+        }
+    };
+
+    const getMill = async (id: any) => {
+        try {
+            const res = await API.get(`mill?brandId=${id}`);
             if (res.success) {
                 setMills(res.data);
             }
@@ -59,9 +79,35 @@ const LabMill = () => {
         }
     };
 
+    const getProgram = async (id: any) => {
+        try {
+            const res = await API.get(`brand/program/get?brandId=${id}`);
+            if (res.success) {
+                setProgram(res.data);
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
+
+    const getThirdParty = async (id: any) => {
+        const url = `third-party-inspection?brandId=${id}`;
+        try {
+            const response = await API.get(url);
+            if (response.success) {
+                const res = response.data;
+                setThirdParty(res);
+            }
+        } catch (error) {
+            console.log(error, "error");
+        }
+    };
+
+
     const fetchLabMill = async () => {
         try {
-            const res = await API.get(`lab-report?labId=${labId}&millId=${appliedFilters.mill_id}&limit=${limit}&page=${page}&search=${searchQuery}&pagination=true`);
+            const res = await API.get(`lab-report?labId=${labId}&millId=${appliedFilters.mill_id}&thirdPartyId=${appliedFilters.third_party}&programId=${appliedFilters.program_id}&limit=${limit}&page=${page}&search=${searchQuery}&pagination=true`);
             if (res.success) {
                 setData(res.data);
                 setCount(res.count);
@@ -93,14 +139,42 @@ const LabMill = () => {
         }
     }, [showFilter]);
 
-    const handleFilterChange = (name: string, value: any) => {
-        setAppliedFilters((prev: any) => ({ ...prev, [name]: value }));
+    const handleFilterChange = (
+        selectedList: any,
+        selectedItem: any,
+        name: string,
+        remove: boolean = false
+    ) => {
+        let itemId = selectedItem?.id;
+        if (name === "mill") {
+            if (appliedFilters?.mill_id?.includes(itemId)) {
+                setAppliedFilters((prev: any) => ({ ...prev, mill_id: appliedFilters?.mill_id?.filter((item: any) => item != itemId) }));
+            } else {
+                setAppliedFilters((prev: any) => ({ ...prev, mill_id: [...appliedFilters?.mill_id, itemId] }));
+            }
+        } else if (name === "thirdParty") {
+            if (appliedFilters?.third_party?.includes(itemId)) {
+                setAppliedFilters((prev: any) => ({ ...prev, third_party: appliedFilters?.third_party?.filter((item: any) => item != itemId) }));
+            } else {
+                setAppliedFilters((prev: any) => ({ ...prev, third_party: [...appliedFilters?.third_party, itemId] }));
+            }
+        }
+        else if (name === "program") {
+            if (appliedFilters?.program_id?.includes(itemId)) {
+                setAppliedFilters((prev: any) => ({ ...prev, program_id: appliedFilters?.program_id?.filter((item: any) => item != itemId) }));
+            } else {
+                setAppliedFilters((prev: any) => ({ ...prev, program_id: [...appliedFilters?.program_id, itemId] }));
+            }
+        }
     };
 
     const clearFilter = () => {
-        setAppliedFilters({
-            mill_id: ""
-        });
+        setAppliedFilters((prev: any) => ({ ...prev, 
+            mill_id: [],
+            third_party: [],
+            program_id: []
+        }));
+
         setIsClear(!isClear);
     };
 
@@ -129,23 +203,103 @@ const LabMill = () => {
                                     <div className="customFormSet">
                                         <div className="w-100">
                                             <div className="row">
-                                                <div className="col-12 col-md-6 col-lg-6 mt-2">
+                                                <div className="col-md-6 col-sm-12 mt-2">
                                                     <label className="text-gray-500 text-[12px] font-medium">
-                                                        Select Mill
+                                                        Select Mill Name
                                                     </label>
-                                                    <select
+                                                    <Multiselect
                                                         className="w-100 shadow-none h-11 rounded-md mt-1 form-control gray-placeholder text-gray-500 text-sm borderCustom"
-                                                        name="mill_id"
-                                                        value={appliedFilters.mill_id || ""}
-                                                        onChange={(e) => handleFilterChange(e.target.name, e.target.value)}
-                                                    >
-                                                        <option value="">Select Mill</option>
-                                                        {mills?.map((mill: any) => (
-                                                            <option key={mill.id} value={mill.id}>
-                                                                {mill.name}
-                                                            </option>
-                                                        ))}
-                                                    </select>
+                                                        // id="programs"
+                                                        displayValue="name"
+                                                        selectedValues={mills?.filter((item: any) =>
+                                                            appliedFilters?.mill_id?.includes(item.id)
+                                                        )}
+                                                        onKeyPressFn={function noRefCheck() { }}
+                                                        onRemove={(selectedList: any, selectedItem: any) => {
+                                                            handleFilterChange(
+                                                                selectedList,
+                                                                selectedItem,
+                                                                "mill",
+                                                                true
+                                                            );
+                                                        }}
+                                                        onSearch={function noRefCheck() { }}
+                                                        onSelect={(selectedList: any, selectedItem: any) =>
+                                                            handleFilterChange(
+                                                                selectedList,
+                                                                selectedItem,
+                                                                "mill",
+                                                                true
+                                                            )
+                                                        }
+                                                        options={mills}
+                                                        showCheckbox
+                                                    />
+                                                </div>
+
+                                                <div className="col-md-6 col-sm-12 mt-2">
+                                                    <label className="text-gray-500 text-[12px] font-medium">
+                                                        Select Third Party
+                                                    </label>
+                                                    <Multiselect
+                                                        className="w-100 shadow-none h-11 rounded-md mt-1 form-control gray-placeholder text-gray-500 text-sm borderCustom"
+                                                        // id="programs"
+                                                        displayValue="name"
+                                                        selectedValues={thirdParty?.filter((item: any) =>
+                                                            appliedFilters?.third_party?.includes(item.id)
+                                                        )}
+                                                        onKeyPressFn={function noRefCheck() { }}
+                                                        onRemove={(selectedList: any, selectedItem: any) => {
+                                                            handleFilterChange(
+                                                                selectedList,
+                                                                selectedItem,
+                                                                "thirdParty",
+                                                                true
+                                                            );
+                                                        }}
+                                                        onSearch={function noRefCheck() { }}
+                                                        onSelect={(selectedList: any, selectedItem: any) =>
+                                                            handleFilterChange(
+                                                                selectedList,
+                                                                selectedItem,
+                                                                "thirdParty"
+                                                            )
+                                                        }
+                                                        options={thirdParty}
+                                                        showCheckbox
+                                                    />
+                                                </div>
+                                                <div className="col-md-6 col-sm-12 mt-2">
+                                                    <label className="text-gray-500 text-[12px] font-medium">
+                                                        Select Program
+                                                    </label>
+                                                    <Multiselect
+                                                        className="w-100 shadow-none h-11 rounded-md mt-1 form-control gray-placeholder text-gray-500 text-sm borderCustom"
+                                                        // id="programs"
+                                                        displayValue="program_name"
+                                                        selectedValues={program?.filter((item: any) =>
+                                                            appliedFilters?.program_id?.includes(item.id)
+                                                        )}
+                                                        onKeyPressFn={function noRefCheck() { }}
+                                                        onRemove={(selectedList: any, selectedItem: any) => {
+                                                            handleFilterChange(
+                                                                selectedList,
+                                                                selectedItem,
+                                                                "program",
+                                                                true
+                                                            );
+                                                        }}
+                                                        onSearch={function noRefCheck() { }}
+                                                        onSelect={(selectedList: any, selectedItem: any) =>
+                                                            handleFilterChange(
+                                                                selectedList,
+                                                                selectedItem,
+                                                                "program"
+                                                            )
+                                                        }
+                                                        options={program}
+                                                        showCheckbox
+                                                    />
                                                 </div>
                                             </div>
                                             <div className="pt-6 w-100 d-flex justify-content-end customButtonGroup buttotn560Fix">
@@ -231,7 +385,7 @@ const LabMill = () => {
             wrap: true,
             width: '120px',
         },
-        
+
         {
             name: (<p className="text-[13px] font-medium">Samples</p>),
             cell: (row: any) => (
@@ -275,7 +429,7 @@ const LabMill = () => {
                             <div className="breadcrumb-left">
                                 <ul className="breadcrum-list-wrap">
                                     <li>
-                                        <Link href="/physical-partner/dashboard" className="active">
+                                        <Link href="/lab/dashboard" className="active">
                                             <span className="icon-home"></span>
                                         </Link>
                                     </li>

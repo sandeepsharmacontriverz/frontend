@@ -415,6 +415,11 @@ export default class User {
           item: "Container Management System",
           icon: FaUser,
         },
+        {
+          id: "services-12",
+          item: "Farm",
+          icon: FaUser,
+        },
         // {
         //   id: "services-4",
         //   item: "Weaver",
@@ -491,12 +496,12 @@ export default class User {
         //   icon: FaChessQueen,
         //   path: "/services/premium-validation",
         // },
-        // {
-        //   id: "services-13",
-        //   item: "Upload Database",
-        //   path: "/services/upload-database",
-        //   icon: BsFillDatabaseFill
-        // },
+        {
+          id: "services-13",
+          item: "Upload Database",
+          path: "/services/upload-database",
+          icon: BsFillDatabaseFill
+        },
         // {
         //   id: "services-14",
         //   item: "Upload Linen",

@@ -25,14 +25,17 @@ export default function page() {
 
     const [program, setProgram] = useState<any>([]);
     const [mill, setMill] = useState<any>([]);
+    const [cms, setCms] = useState<any>([]);
     const [lab, setLab] = useState<any>([]);
     const [thirdParty, setThirdParty] = useState<any>([]);
     const [isClear, setIsClear] = useState(false);
 
     const [checkedMill, setCheckedMill] = useState<any>([]);
+    const [checkedCms, setCheckedCms] = useState<any>([]);
     const [checkedLab, setCheckedLab] = useState<any>([]);
     const [checkedThirdParty, setCheckedThirdParty] = useState<any>([]);
     const [checkedPrograms, setCheckedPrograms] = useState<any>([]);
+    const [activeProcessor, setActiveProcessor] = useState("Mill");
 
 
     const [count, setCount] = useState<any>();
@@ -56,7 +59,7 @@ export default function page() {
     const fetchSales = async () => {
         try {
             const response = await API.get(
-                `lab-report?brandId=${brandId}&limit=${limit}&page=${page}&search=${code}&thirdPartyId=${checkedThirdParty}&labId=${checkedLab}&millId=${checkedMill}&programId=${checkedPrograms}&pagination=true`
+                `lab-report${activeProcessor!=="Mill"?"/fetch-cms-samples":""}?brandId=${brandId}&limit=${limit}&page=${page}&search=${code}&thirdPartyId=${checkedThirdParty}&labId=${checkedLab}&millId=${checkedMill}&cmsId=${checkedCms}&programId=${checkedPrograms}&pagination=true`
             );
             if (response.success) {
                 setData(response.data);
@@ -103,13 +106,14 @@ export default function page() {
         if (brandId) {
             getProgram();
             getMill();
+            getCms();
             getLab();
             getThirdParty();
         }
     }, [brandId]);
 
     const getProgram = async () => {
-        const url = `program`;
+        const url = `brand/program/get?brandId=${brandId}`;
         try {
             const response = await API.get(url);
             if (response.success) {
@@ -133,6 +137,19 @@ export default function page() {
             console.log(error, "error");
         }
     };
+
+    const getCms = async () => {
+      const url = `container-management-system?brandId=${brandId}`;
+      try {
+          const response = await API.get(url);
+          if (response.success) {
+              const res = response.data;
+              setCms(res);
+          }
+      } catch (error) {
+          console.log(error, "error");
+      }
+  };
 
     const getLab = async () => {
         const url = `lab?brandId=${brandId}`;
@@ -173,6 +190,12 @@ export default function page() {
           } else {
             setCheckedMill([...checkedMill, itemId]);
           }
+        } else if (name === "cms") {
+          if (checkedCms.includes(itemId)) {
+            setCheckedCms(checkedCms.filter((item: any) => item != itemId));
+          } else {
+            setCheckedCms([...checkedCms, itemId]);
+          }
         } else if (name === "lab") {
           if (checkedLab.includes(itemId)) {
             setCheckedLab(checkedLab.filter((item: any) => item !== itemId));
@@ -201,6 +224,7 @@ export default function page() {
 
       const clearFilterList = () => {
         setCheckedMill([]);
+        setCheckedCms([]);
         setCheckedLab([]);
         setCheckedThirdParty([]);
         setCheckedPrograms([]);
@@ -230,40 +254,76 @@ export default function page() {
                     <div className="customFormSet">
                       <div className="w-100">
                         <div className="row">
-                          <div className="col-md-6 col-sm-12 mt-2">
-                            <label className="text-gray-500 text-[12px] font-medium">
-                              Select Mill Name
-                            </label>
-                            <Multiselect
-                              className="w-100 shadow-none h-11 rounded-md mt-1 form-control gray-placeholder text-gray-500 text-sm borderCustom"
-                              // id="programs"
-                              displayValue="name"
-                              selectedValues={mill?.filter((item: any) =>
-                                checkedMill.includes(item.id)
-                              )}
-                              onKeyPressFn={function noRefCheck() { }}
-                              onRemove={(selectedList: any, selectedItem: any) => {
-                                handleFilterChange(
-                                  selectedList,
-                                  selectedItem,
-                                  "mill",
-                                  true
-                                );
-                              }}
-                              onSearch={function noRefCheck() { }}
-                              onSelect={(selectedList: any, selectedItem: any) =>
-                                handleFilterChange(
-                                  selectedList,
-                                  selectedItem,
-                                  "mill",
-                                  true
-                                )
-                              }
-                              options={mill}
-                              showCheckbox
-                            />
-                          </div>
 
+                          {activeProcessor === "Mill" ?
+                            <div className="col-md-6 col-sm-12 mt-2">
+                              <label className="text-gray-500 text-[12px] font-medium">
+                                Select Mill Name
+                              </label>
+                              <Multiselect
+                                className="w-100 shadow-none h-11 rounded-md mt-1 form-control gray-placeholder text-gray-500 text-sm borderCustom"
+                                // id="programs"
+                                displayValue="name"
+                                selectedValues={mill?.filter((item: any) =>
+                                  checkedMill.includes(item.id)
+                                )}
+                                onKeyPressFn={function noRefCheck() { }}
+                                onRemove={(selectedList: any, selectedItem: any) => {
+                                  handleFilterChange(
+                                    selectedList,
+                                    selectedItem,
+                                    "mill",
+                                    true
+                                  );
+                                }}
+                                onSearch={function noRefCheck() { }}
+                                onSelect={(selectedList: any, selectedItem: any) =>
+                                  handleFilterChange(
+                                    selectedList,
+                                    selectedItem,
+                                    "mill",
+                                    true
+                                  )
+                                }
+                                options={mill}
+                                showCheckbox
+                              />
+                            </div>
+                            :
+                            <div className="col-md-6 col-sm-12 mt-2">
+                              <label className="text-gray-500 text-[12px] font-medium">
+                                Select Container Management Name
+                              </label>
+                              <Multiselect
+                                className="w-100 shadow-none h-11 rounded-md mt-1 form-control gray-placeholder text-gray-500 text-sm borderCustom"
+                                // id="programs"
+                                displayValue="name"
+                                selectedValues={cms?.filter((item: any) =>
+                                  checkedCms.includes(item.id)
+                                )}
+                                onKeyPressFn={function noRefCheck() { }}
+                                onRemove={(selectedList: any, selectedItem: any) => {
+                                  handleFilterChange(
+                                    selectedList,
+                                    selectedItem,
+                                    "cms",
+                                    true
+                                  );
+                                }}
+                                onSearch={function noRefCheck() { }}
+                                onSelect={(selectedList: any, selectedItem: any) =>
+                                  handleFilterChange(
+                                    selectedList,
+                                    selectedItem,
+                                    "cms",
+                                    true
+                                  )
+                                }
+                                options={cms}
+                                showCheckbox
+                              />
+                            </div>
+                          }
                           <div className="col-md-6 col-sm-12 mt-2">
                             <label className="text-gray-500 text-[12px] font-medium">
                               Select Lab Name
@@ -397,6 +457,17 @@ export default function page() {
         setShowFilterImg(!showFilterImg);
       };
 
+      const switchProcessorTab = (processorType: string) => {
+        setCheckedMill([]);
+        setCheckedCms([]);
+        setCheckedLab([]);
+        setCheckedThirdParty([]);
+        setCheckedPrograms([]);
+        setIsClear(!isClear);
+        setSearchQuery("");
+        setActiveProcessor(processorType);
+      };
+
     const DocumentPopup = ({ openFilter, dataArray, onClose }: any) => {
         const popupRef = useRef<HTMLDivElement>(null);
 
@@ -504,10 +575,17 @@ export default function page() {
             wrap: true,
         },
         {
-            name: <p className="text-[13px] font-medium">Mill Name</p>,
-            selector: (row: any) => row.mill?.name,
+            name: <p className="text-[13px] font-medium">{activeProcessor !== "Container Management System" ? "Mill Name" : "CMS Name"}</p>,
+            selector: (row: any) => activeProcessor !== "Container Management System" ? row.mill?.name : row?.cms?.name,
             sortable: false,
             wrap: true,
+        },
+        {
+          name: <p className="text-[13px] font-medium"> Container No.</p>,
+          selector: (row: any) => row?.container?.container_no,
+          sortable: false,
+          omit: activeProcessor !== "Container Management System",
+          wrap: true,
         },
         {
             name: <p className="text-[13px] font-medium"> Lot No </p>,
@@ -560,7 +638,8 @@ export default function page() {
             sortable: false,
             wrap: true,
         },
-    ];
+    ].filter(Boolean);
+
     if (!roleLoading) {
         return (
             <div>
@@ -579,7 +658,27 @@ export default function page() {
                         </div>
                     </div>
                 </div>
-
+                <div className="topTrader d-block">
+                  <section>
+                    <button
+                      className={`w-100 ${activeProcessor === "Mill" ? "activeFilter" : ""
+                        }`}
+                      type="button"
+                      onClick={() => switchProcessorTab("Mill")}
+                    >
+                      Mill
+                    </button>
+                    <button
+                      className={`w-100 ${activeProcessor === "Container Management System" ? "activeFilter" : ""
+                        }`}
+                      type="button"
+                      onClick={() => switchProcessorTab("Container Management System")}
+                    >
+                      Container Management System
+                    </button>
+                  </section>
+                  <section className="buttonTab"></section>
+                </div>
                 <div className="farm-group-box">
                     <div className="farm-group-inner">
                         <div className="table-form">
@@ -602,21 +701,21 @@ export default function page() {
                                             </form>
                                         </div>
                                         <div className="fliterBtn">
-                      <button
-                        className="flex"
-                        type="button"
-                        onClick={() => setShowFilter(!showFilter)}
-                      >
-                        FILTERS <BiFilterAlt className="m-1" />
-                      </button>
+                                        <button
+                                          className="flex"
+                                          type="button"
+                                          onClick={() => setShowFilter(!showFilter)}
+                                        >
+                                          FILTERS <BiFilterAlt className="m-1" />
+                                        </button>
 
-                      <div className="relative">
-                        <FilterPopupList
-                          openFilter={showFilter}
-                          onClose={!showFilter}
-                        />
-                      </div>
-                    </div>
+                                        <div className="relative">
+                                          <FilterPopupList
+                                            openFilter={showFilter}
+                                            onClose={!showFilter}
+                                          />
+                                        </div>
+                                      </div>
                                     </div>
                                 </div>
                                 <DocumentPopup

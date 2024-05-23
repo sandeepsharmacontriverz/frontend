@@ -49,6 +49,7 @@ class API {
           case window.location.pathname.startsWith("/third-party-inspection"):
           case window.location.pathname.startsWith("/lab"):
           case window.location.pathname.startsWith("/container-management-system"):
+          case window.location.pathname.startsWith("/farm"):
           case window.location.pathname.startsWith("/garment"):
           case window.location.pathname.startsWith("/brand"):
           case window.location.pathname.startsWith("/physical-partner"):

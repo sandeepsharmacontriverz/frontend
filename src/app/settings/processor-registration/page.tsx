@@ -118,9 +118,8 @@ export default function page() {
 
   const getProcessorList = async () => {
     let processor = activeProcessor.toLowerCase().split(' ').join('-');
-    console.log("processor----------",processor)
     // let processor = 'mandi';
-    const url = `${processor}?search=${searchQuery}&brandId=${brandId ? brandId : ""
+    const url = `${processor=="farm"?"farm-processor":processor}?search=${searchQuery}&brandId=${brandId ? brandId : ""
       }&countryId=${checkedCountries}&stateId=${checkedStates}&limit=${limit}&page=${page}&pagination=true`;
     try {
       const response = await API.get(url);
@@ -509,6 +508,14 @@ export default function page() {
               onClick={() => switchProcessorTab("Container Management System")}
             >
               Container Management System
+            </button>
+            <button
+              className={`${activeProcessor === "Farm" ? "activeFilter" : ""
+                }`}
+              type="button"
+              onClick={() => switchProcessorTab("Farm")}
+            >
+             Farm
             </button>
             {/* 
             <button

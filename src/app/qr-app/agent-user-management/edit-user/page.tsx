@@ -96,7 +96,7 @@ export default function addTransaction() {
       const matchNames: any = villages
         ?.filter((village: any) => checkedVillage?.includes(village?.id))
         ?.map((item: any) => item?.village_name);
-      if (checkedVillage.length > 0) {
+      if (checkedVillage?.length > 0) {
         setIntiallySelected(
           formData?.allVillage === true ? ["All"] : matchNames
         );
@@ -167,7 +167,7 @@ export default function addTransaction() {
 
   useEffect(() => {
     if (isInitialized) {
-      if (checkedDistrict.length !== 0) {
+      if (checkedDistrict?.length !== 0) {
         getBlocks();
       } else {
         setBlocks([]);
@@ -179,7 +179,7 @@ export default function addTransaction() {
 
   useEffect(() => {
     if (isInitialized) {
-      if (checkedBlock.length !== 0) {
+      if (checkedBlock?.length !== 0) {
         GetVillages();
       } else {
         setVillages([]);
@@ -623,7 +623,7 @@ export default function addTransaction() {
         setFormDataValue("firstName", label);
       }
 
-      if (name === "mobile" && value.length <= 10) {
+      if (name === "mobile" && value?.length <= 10) {
         setFormDataValue(name, value);
       } else if (type !== "radio" && name !== "mobile") {
         setFormDataValue(name, value);

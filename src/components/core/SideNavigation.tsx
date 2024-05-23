@@ -138,6 +138,7 @@ export default function ({
         case window.location.pathname.startsWith("/third-party-inspection"):
         case window.location.pathname.startsWith("/lab"):
         case window.location.pathname.startsWith("/container-management"):
+        case window.location.pathname.startsWith("/farm"):
         case window.location.pathname.startsWith("/garment"):
         case window.location.pathname.startsWith("/brand"):
         case window.location.pathname.startsWith("/physical-partner"):
@@ -252,7 +253,7 @@ export default function ({
 
   const getProcessor = async () => {
     const name = processorName.toLowerCase().split(' ').join('-');
-    const url = name === "brand" ? `${name}` : `${name}?stateId=${formData.stateId}`;
+    const url = name === "brand" ? `${name}` : name === "farm" ?  `farm-processor` : `${name}?stateId=${formData.stateId}`;
     if (name !== "brand" && formData.stateId && formData.stateId !== "") {
       setSelectLoading({
         isCountryLoading: false,
@@ -1185,7 +1186,13 @@ export default function ({
               </div>
             )}
             {/* Dynamic Side Navigation Menu */}
-            {menuAccessList?.map((item: any, name: any, index: any) => (
+            {menuAccessList.length<=0 ? 
+            <>
+              <div className="flex flex-col items-center animate-bounce-pulse space-y-4">
+                <div className="w-9 h-9 bg-gray-200 rounded-full shadow-lg"></div>
+              </div>
+            </> : 
+            menuAccessList?.map((item: any, name: any, index: any) => (
               <div key={item.id} className="navigation-item dropend">
                 {item.childrens ? (
                   <Dropdown autoClose={true}

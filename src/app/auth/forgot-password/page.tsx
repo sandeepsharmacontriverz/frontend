@@ -14,8 +14,10 @@ const ForgotPassword: NextPage = () => {
 
   const [errorMessage, setErrorMessage] = useState<{ [key: string]: string | null }>({});
   const [isSent, isSetSent] = useState(false)
+  const [submitLoader, setSubmitLoader] = useState(false);
   const handleFormSubmit = async (formData: { [key: string]: any }) => {
     // Perform form submission logic or API request here
+    setSubmitLoader(true);
     try {
       const result = await API.post(
         ["auth", "forgot-password"],
@@ -24,6 +26,7 @@ const ForgotPassword: NextPage = () => {
 
       if (result.success) {
         isSetSent(true)
+        setSubmitLoader(false);
       }
       else {
         let field = "email";
@@ -32,8 +35,10 @@ const ForgotPassword: NextPage = () => {
           ...errorMessage,
           [field]: res,
         });
+        setSubmitLoader(false);
       }
     } catch (error) {
+      setSubmitLoader(false);
       // errorHandler(error);
     }
   };
@@ -50,6 +55,7 @@ const ForgotPassword: NextPage = () => {
           linkText="Back"
           linkUrl="/auth/login"
           onSubmit={handleFormSubmit}
+          submitLoader={submitLoader}
           error={errorMessage}
         />
         :

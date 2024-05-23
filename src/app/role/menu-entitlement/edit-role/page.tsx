@@ -680,7 +680,7 @@ export default function editMenuEntitlement() {
             menuShouldScrollIntoView={false}
             isClearable
             placeholder="Select User Category"
-            className="z-[2] dropDownFixes rounded-md formDropDown mt-1 text-sm borderBottom"
+            className="z-[1] dropDownFixes rounded-md formDropDown mt-1 text-sm borderBottom"
             isDisabled
           />
           {errors.categoryId && (
@@ -699,7 +699,7 @@ export default function editMenuEntitlement() {
                 menuShouldScrollIntoView={false}
                 isClearable
                 placeholder="Select Brand"
-                className="z-[2] dropDownFixes rounded-md formDropDown mt-1 text-sm borderBottom"
+                className="z-[1] dropDownFixes rounded-md formDropDown mt-1 text-sm borderBottom"
                 options={(brandList || []).map(({ id, brand_name }: any) => ({
                   label: brand_name,
                   value: id,
@@ -739,6 +739,7 @@ export default function editMenuEntitlement() {
         <DataTable
           persistTableHead
           fixedHeader={true}
+          className="z-0"
           noDataComponent={""}
           fixedHeaderScrollHeight={"500px"}
           columns={columns}

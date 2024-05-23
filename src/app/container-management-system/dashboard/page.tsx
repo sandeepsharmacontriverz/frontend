@@ -166,9 +166,9 @@ useEffect(()=> {
 
   const getMill = async () => {
     try {
-      const res = await API.get(`mill`);
+      const res = await API.get(`container-management/get-mills?cmsId=${containerManagementId}`);
       if (res.success) {
-        setMill(res.data);
+        setMill(res.data?.map((item:any)=> item.mill));
       }
     } catch (error) {
       console.log(error);
@@ -291,7 +291,7 @@ useEffect(()=> {
   const handleExport = async () => {
     try {
       const res = await API.get(
-        `container-management/transaction/export?containerManagementId=${containerManagementId}&pagination=true`
+        `container-management/export-transaction-all?cmsId=${containerManagementId}`
       );
       if (res.success) {
         handleDownload(res.data, "CMS Transaction List", ".xlsx");
@@ -466,11 +466,11 @@ useEffect(()=> {
       selector: (row: any) => row.date.substring(0, 10),
       wrap: true,
     },
-    {
-      name: <p className="text-[13px] font-medium">Season</p>,
-      wrap: true,
-      selector: (row: any) => row.season?.name,
-    },
+    // {
+    //   name: <p className="text-[13px] font-medium">Season</p>,
+    //   wrap: true,
+    //   selector: (row: any) => row.season?.name,
+    // },
     {
       name: <p className="text-[13px] font-medium">Sold To</p>,
       // width: "180px",
@@ -503,19 +503,19 @@ useEffect(()=> {
     {
       name: (
         <p className="text-[13px] font-medium">
-          Rice Type
+          Rice Variety
         </p>
       ),
-      selector: (row: any) => row?.ricetype?.map((item: any) => item.riceType_name)?.join(','),
+      selector: (row: any) => row?.riceVariety?.map((item: any) => item.variety_name)?.join(','),
       wrap: true,
     },
     {
       name: (
         <p className="text-[13px] font-medium">
-          Rice Variety
+          Rice Type
         </p>
       ),
-      selector: (row: any) => row?.riceVariety?.map((item: any) => item.variety_name)?.join(','),
+      selector: (row: any) => row?.ricetype?.map((item: any) => item.riceType_name)?.join(','),
       wrap: true,
     },
     {
@@ -525,18 +525,18 @@ useEffect(()=> {
     {
       name: (
         <p className="text-[13px] font-medium">
-          Container No
+          Container Numbers
         </p>
       ),
       width: '170px',
       selector: (row: any) => row.containers?.map((item: any) => item.container_no)?.join(','),
       wrap: true,
     },
-    {
-      name: <p className="text-[13px] font-medium">REEL Lot No</p>,
-      wrap: true,
-      selector: (row: any) => row.reel_lot_no,
-    },
+    // {
+    //   name: <p className="text-[13px] font-medium">REEL Lot No</p>,
+    //   wrap: true,
+    //   selector: (row: any) => row.reel_lot_no,
+    // },
     {
       name: <p className="text-[13px] font-medium">Total Weight (Kgs) </p>,
       wrap: true,
@@ -546,16 +546,6 @@ useEffect(()=> {
       name: <p className="text-[13px] font-medium">Program</p>,
       wrap: true,
       selector: (row: any) => row.program?.program_name,
-    },
-    {
-      name: <p className="text-[13px] font-medium">Invoice</p>,
-      wrap: true,
-      center: true,
-      cell: (row: any) => (
-        <>
-          <span>{row.invoice_no}</span>
-        </>
-      ),
     },
     {
       name: <p className="text-[13px] font-medium">Status</p>,
@@ -737,11 +727,11 @@ useEffect(()=> {
       selector: (row: any) => row.date.substring(0, 10),
       wrap: true,
     },
-    {
-      name: <p className="text-[13px] font-medium">Season</p>,
-      wrap: true,
-      selector: (row: any) => row.season?.name,
-    },
+    // {
+    //   name: <p className="text-[13px] font-medium">Season</p>,
+    //   wrap: true,
+    //   selector: (row: any) => row.season?.name,
+    // },
 
     {
       name: <p className="text-[13px] font-medium">Rice Mill Name</p>,
@@ -769,19 +759,19 @@ useEffect(()=> {
     {
       name: (
         <p className="text-[13px] font-medium">
-          Rice Type
+          Rice Variety
         </p>
       ),
-      selector: (row: any) => row?.ricetype?.map((item: any) => item.riceType_name)?.join(','),
+      selector: (row: any) => row?.riceVariety?.map((item: any) => item.variety_name)?.join(','),
       wrap: true,
     },
     {
       name: (
         <p className="text-[13px] font-medium">
-          Rice Variety
+          Rice Type
         </p>
       ),
-      selector: (row: any) => row?.riceVariety?.map((item: any) => item.variety_name)?.join(','),
+      selector: (row: any) => row?.ricetype?.map((item: any) => item.riceType_name)?.join(','),
       wrap: true,
     },
     {

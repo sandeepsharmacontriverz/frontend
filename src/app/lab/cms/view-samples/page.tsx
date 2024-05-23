@@ -12,7 +12,7 @@ import API from '@lib/Api';
 import { useRouter } from '@lib/router-events';
 import { FaDownload, FaEye } from 'react-icons/fa';
 
-const LabMillViewSamples = () => {
+const LabCmsViewSamples = () => {
     useTitle("View Samples");
 
     const [roleLoading] = useRole();
@@ -37,9 +37,9 @@ const LabMillViewSamples = () => {
         setLimit(limitData);
     };
 
-    const fetchMillSamples = async () => {
+    const fetchCmsSamples = async () => {
         try {
-            const res = await API.get(`lab-report/rice-samples?thirdPartySampleId=${id}&limit=${limit}&page=${page}&search=${searchQuery}&pagination=true`);
+            const res = await API.get(`lab-report/container-samples?cmsSampleId=${id}&limit=${limit}&page=${page}&search=${searchQuery}&pagination=true`);
             if (res.success) {
                 setData(res.data);
                 setCount(res.count);
@@ -52,7 +52,7 @@ const LabMillViewSamples = () => {
 
     useEffect(() => {
         if (id) {
-            fetchMillSamples();
+            fetchCmsSamples();
         }
     }, [searchQuery, page, limit, id]);
 
@@ -143,8 +143,8 @@ const LabMillViewSamples = () => {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/lab/mill" className="active">
-                                            Mill
+                                        <Link href="/lab/cms" className="active">
+                                            Container Management System
                                         </Link>
                                     </li>
                                     <li>View Samples</li>
@@ -178,7 +178,7 @@ const LabMillViewSamples = () => {
                                             <div className="search-filter-right customButtonGroup">
                                                 <button
                                                     className="btn-outline-purple"
-                                                    onClick={() => router.push('/lab/mill')}
+                                                    onClick={() => router.push('/lab/cms')}
                                                 >
                                                     {translations.common.back}
                                                 </button>
@@ -202,4 +202,4 @@ const LabMillViewSamples = () => {
     }
 }
 
-export default LabMillViewSamples;
+export default LabCmsViewSamples;

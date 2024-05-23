@@ -634,7 +634,8 @@ export default function page() {
           val.user_role === "Mill" ||
           val.user_role === "Third_Party_Inspection" ||
           val.user_role === "Lab" ||
-          val.user_role === "Container_Management_System"
+          val.user_role === "Container_Management_System" ||
+          val.user_role === "Farm"
           // // val.user_role === "Trader" ||
           // val.user_role === "Fabric" ||
           // val.user_role === "Garment" ||

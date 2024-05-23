@@ -2117,13 +2117,13 @@ const QrGeneratePopup = ({ title, onClose, onSubmit }: any) => {
       }));
       isError = true;
     }
-    if (!data.riceVariety || data.riceVariety === "") {
-      setError((prevError: any) => ({
-        ...prevError,
-        riceVariety: "Rice Variety  is required",
-      }));
-      isError = true;
-    }
+    // if (!data.riceVariety || data.riceVariety === "") {
+    //   setError((prevError: any) => ({
+    //     ...prevError,
+    //     riceVariety: "Rice Variety  is required",
+    //   }));
+    //   isError = true;
+    // }
 
     if (!data.state) {
       setError((prevError: any) => ({
@@ -2156,7 +2156,6 @@ const QrGeneratePopup = ({ title, onClose, onSubmit }: any) => {
       }));
       isError = true;
     }
-
     return isError;
   };
 
@@ -2165,7 +2164,6 @@ const QrGeneratePopup = ({ title, onClose, onSubmit }: any) => {
     if (handleErrors()) {
       return;
     }
-
     setActionButtonActive(true)
     if (title === "Bulk Download QR Code") {
       const url = `farmer/export-qr?villageId=${data.village}`;

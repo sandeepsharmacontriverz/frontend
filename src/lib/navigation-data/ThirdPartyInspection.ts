@@ -8,6 +8,7 @@ import { ImSpinner4 } from "react-icons/im";
 interface MenuItem {
     id: string;
     item: string;
+    name?: string;
     path?: string;
     icon?: any;
     childrens?: MenuItem[];
@@ -17,11 +18,21 @@ interface MenuItem {
 export default class User {
     static list: MenuItem[] = [
         {
-            item: "Sample Details",
-            id: "Sample Details",
+            item: "Mill Samples",
+            name: "Mill Samples",
+            id: "Mill Samples",
             icon: ImTree,
             size: 20,
-            path: "/third-party-inspection/sample-details",
+            path: "/third-party-inspection/mill-samples",
+            isOpen: false,
+        },
+        {
+            item: "CMS Samples",
+            name: "CMS Samples",
+            id: "CMS Samples",
+            icon: ImTree,
+            size: 20,
+            path: "/third-party-inspection/cms-samples",
             isOpen: false,
         },
     ];

@@ -11,7 +11,7 @@ import CommonDataTable from '@components/core/Table';
 import API from '@lib/Api';
 import { useRouter } from '@lib/router-events';
 
-const ViewMillResult = () => {
+const ViewCmsResult = () => {
     useTitle("View Result");
 
     const router = useRouter();
@@ -21,13 +21,13 @@ const ViewMillResult = () => {
     const searchParams = useSearchParams();
     const id = searchParams.get("id");
 
-    const [labMill, setLabMill] = useState<any>({});
+    const [labCms, setLabCms] = useState<any>({});
 
-    const fetchLabMill = async () => {
+    const fetchLabCms = async () => {
         try {
-            const res = await API.get(`third-party-sample/get-rice-sample?id=${id}`);
+            const res = await API.get(`third-party-sample/get-cms-sample?id=${id}`);
             if (res.success) {
-                setLabMill(res.data);
+                setLabCms(res.data);
             }
         } catch (error) {
             console.log(error);
@@ -40,7 +40,7 @@ const ViewMillResult = () => {
 
     useEffect(() => {
         if (id) {
-            fetchLabMill();
+            fetchLabCms();
         }
     }, [id]);
 
@@ -81,8 +81,8 @@ const ViewMillResult = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/lab/mill" className="active">
-                                        Mill
+                                    <Link href="/lab/cms" className="active">
+                                        Container Management System
                                     </Link>
                                 </li>
                                 <li>View Result</li>
@@ -95,19 +95,19 @@ const ViewMillResult = () => {
                     <div className="customButtonGroup text-right">
                         <button
                             className="btn-outline-purple"
-                            onClick={() => router.push('/lab/mill')}
+                            onClick={() => router.push('/lab/cms')}
                         >
                             {translations.common.back}
                         </button>
                     </div>
                     <div className='mt-4'>
-                        <CommonDataTable columns={columns} data={[labMill]} pagination={false} count={[labMill].length} />
+                        <CommonDataTable columns={columns} data={[labCms]} pagination={false} count={[labCms]?.length} />
                     </div>
 
                     <div className='row mt-5'>
                         <h2 className="text-l font-semibold">Uploaded Report:</h2>
                         <div className='mt-2 flex gap-2'>
-                            {labMill?.sample_reports?.map((report: any, i: number) => {
+                            {labCms?.sample_reports?.map((report: any, i: number) => {
                                 return report.includes('.pdf') ? (
                                     <div key={i}>
                                         <button
@@ -134,4 +134,4 @@ const ViewMillResult = () => {
     }
 }
 
-export default ViewMillResult;
+export default ViewCmsResult;

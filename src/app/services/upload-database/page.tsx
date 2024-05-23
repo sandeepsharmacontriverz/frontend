@@ -55,108 +55,108 @@ export default function page() {
       fileName: "Farmer Format",
       fileType: "xlsx",
     },
-    {
-      name: "organic_farmer",
-      fileLink: "/files/organic_farmer.xlsx",
-      fileName: "Organic Farmer Format",
-      fileType: "xlsx",
-    },
+    // {
+    //   name: "organic_farmer",
+    //   fileLink: "/files/organic_farmer.xlsx",
+    //   fileName: "Organic Farmer Format",
+    //   fileType: "xlsx",
+    // },
     {
       name: "procurement",
       fileLink: "/files/Procurement_upload_format.xlsx",
       fileName: "Procurement Format",
       fileType: "xlsx",
     },
-    {
-      name: "villageData",
-      fileLink: "/files/Village-upload-format.csv",
-      fileName: "Village Format",
-      fileType: "csv",
-    },
-    {
-      name: "garmentType",
-      fileLink: "/files/garment_type.csv",
-      fileName: "Garment Type Format",
-      fileType: "csv",
-    },
-    {
-      name: "styleMark",
-      fileLink: "/files/style_mark_number.csv",
-      fileName: "Style/Mark No Format",
-      fileType: "csv",
-    },
-    {
-      name: "processor",
-      fileLink: "/files/processor_list.csv",
-      fileName: "Processor List Format",
-      fileType: "csv",
-    },
-    {
-      name: "procurement_price",
-      fileLink: "/files/procurement_price_update_format.xlsx",
-      fileName: "Procurement Price Update Format",
-      fileType: "xlsx",
-    },
-    {
-      name: "ginnerExpectedSeed",
-      fileLink: "/files/ginner_expected_cotton_data.xlsx",
-      fileName: "Ginner Expected Cotton Data",
-      fileType: "xlsx",
-    },
-    {
-      name: "ginnerOrder",
-      fileLink: "/files/ginner_order_in_hand.xlsx",
-      fileName: "Ginner Order in Hand",
-      fileType: "xlsx",
-    },
-    {
-      name: 'impactData',
-      fileLink: '/files/Impact_data.xlsx',
-      fileName: 'Impact Data Format',
-      fileType: 'xlsx',
-    },
-    {
-      name: "farm_group_evaluation_data",
-      fileLink: "/files/farm_group_evaluation_data.xlsx",
-      fileName: "Farm Group Evaluation Data Format",
-      fileType: "xlsx",
-    },
-    {
-      name: "ics_quantity_estimation",
-      fileLink: "/files/ics_quantity_estimation.xlsx",
-      fileName: "ICS Quantity Estimation Format",
-      fileType: "xlsx",
-    },
-    {
-      name: "seed_testing_linkage",
-      fileLink: "/files/seed_testing_linkage.xlsx",
-      fileName: "Seed Testing and Linkage Format",
-      fileType: "xlsx",
-    },
-    {
-      name: "seed_demand",
-      fileLink: "/files/seed_demand.xlsx",
-      fileName: "Seed Demand Format",
-      fileType: "xlsx",
-    },
-    {
-      name: "seed_availability",
-      fileLink: "/files/seed_availability.xlsx",
-      fileName: "Seed Availability Format",
-      fileType: "xlsx",
-    },
-    {
-      name: "ics_name",
-      fileLink: "/files/ics_name.xlsx",
-      fileName: "ICS Name Format",
-      fileType: "xlsx",
-    },
-    {
-      name: "integrity_test",
-      fileLink: "/files/integrity_test.xlsx",
-      fileName: "Integrity Test Format",
-      fileType: "xlsx",
-    },
+    // {
+    //   name: "villageData",
+    //   fileLink: "/files/Village-upload-format.csv",
+    //   fileName: "Village Format",
+    //   fileType: "csv",
+    // },
+    // {
+    //   name: "garmentType",
+    //   fileLink: "/files/garment_type.csv",
+    //   fileName: "Garment Type Format",
+    //   fileType: "csv",
+    // },
+    // {
+    //   name: "styleMark",
+    //   fileLink: "/files/style_mark_number.csv",
+    //   fileName: "Style/Mark No Format",
+    //   fileType: "csv",
+    // },
+    // {
+    //   name: "processor",
+    //   fileLink: "/files/processor_list.csv",
+    //   fileName: "Processor List Format",
+    //   fileType: "csv",
+    // },
+    // {
+    //   name: "procurement_price",
+    //   fileLink: "/files/procurement_price_update_format.xlsx",
+    //   fileName: "Procurement Price Update Format",
+    //   fileType: "xlsx",
+    // },
+    // {
+    //   name: "ginnerExpectedSeed",
+    //   fileLink: "/files/ginner_expected_cotton_data.xlsx",
+    //   fileName: "Ginner Expected Cotton Data",
+    //   fileType: "xlsx",
+    // },
+    // {
+    //   name: "ginnerOrder",
+    //   fileLink: "/files/ginner_order_in_hand.xlsx",
+    //   fileName: "Ginner Order in Hand",
+    //   fileType: "xlsx",
+    // },
+    // {
+    //   name: 'impactData',
+    //   fileLink: '/files/Impact_data.xlsx',
+    //   fileName: 'Impact Data Format',
+    //   fileType: 'xlsx',
+    // },
+    // {
+    //   name: "farm_group_evaluation_data",
+    //   fileLink: "/files/farm_group_evaluation_data.xlsx",
+    //   fileName: "Farm Group Evaluation Data Format",
+    //   fileType: "xlsx",
+    // },
+    // {
+    //   name: "ics_quantity_estimation",
+    //   fileLink: "/files/ics_quantity_estimation.xlsx",
+    //   fileName: "ICS Quantity Estimation Format",
+    //   fileType: "xlsx",
+    // },
+    // {
+    //   name: "seed_testing_linkage",
+    //   fileLink: "/files/seed_testing_linkage.xlsx",
+    //   fileName: "Seed Testing and Linkage Format",
+    //   fileType: "xlsx",
+    // },
+    // {
+    //   name: "seed_demand",
+    //   fileLink: "/files/seed_demand.xlsx",
+    //   fileName: "Seed Demand Format",
+    //   fileType: "xlsx",
+    // },
+    // {
+    //   name: "seed_availability",
+    //   fileLink: "/files/seed_availability.xlsx",
+    //   fileName: "Seed Availability Format",
+    //   fileType: "xlsx",
+    // },
+    // {
+    //   name: "ics_name",
+    //   fileLink: "/files/ics_name.xlsx",
+    //   fileName: "ICS Name Format",
+    //   fileType: "xlsx",
+    // },
+    // {
+    //   name: "integrity_test",
+    //   fileLink: "/files/integrity_test.xlsx",
+    //   fileName: "Integrity Test Format",
+    //   fileType: "xlsx",
+    // },
   ];
 
   useEffect(() => {
@@ -311,104 +311,104 @@ export default function page() {
       hasErrors = true;
     }
 
-    if (!villageFormat.country) {
-      setErrors((prevError: any) => ({
-        ...prevError,
-        country: "This field  is Required",
-      }));
-      hasErrors = true;
-    }
+    // if (!villageFormat.country) {
+    //   setErrors((prevError: any) => ({
+    //     ...prevError,
+    //     country: "This field  is Required",
+    //   }));
+    //   hasErrors = true;
+    // }
 
-    if (!villageFormat.state) {
-      setErrors((prevError: any) => ({
-        ...prevError,
-        state: "This field  is Required",
-      }));
-      hasErrors = true;
-    }
+    // if (!villageFormat.state) {
+    //   setErrors((prevError: any) => ({
+    //     ...prevError,
+    //     state: "This field  is Required",
+    //   }));
+    //   hasErrors = true;
+    // }
 
-    if (!villageFormat.district) {
-      setErrors((prevError: any) => ({
-        ...prevError,
-        district: "This field  is Required",
-      }));
-      hasErrors = true;
-    }
+    // if (!villageFormat.district) {
+    //   setErrors((prevError: any) => ({
+    //     ...prevError,
+    //     district: "This field  is Required",
+    //   }));
+    //   hasErrors = true;
+    // }
 
-    if (!villageFormat.taluk) {
-      setErrors((prevError: any) => ({
-        ...prevError,
-        taluk: "This field  is Required",
-      }));
-      hasErrors = true;
-    }
+    // if (!villageFormat.taluk) {
+    //   setErrors((prevError: any) => ({
+    //     ...prevError,
+    //     taluk: "This field  is Required",
+    //   }));
+    //   hasErrors = true;
+    // }
 
-    if (
-      !hasErrors &&
-      selectedFileFormat === "villageData" &&
-      jsonStructure.length > 0 &&
-      !errors.upload
-    ) {
-      const jsonData = {
-        villageData: jsonStructure,
-        blockId: villageFormat.taluk,
-      };
-      uploadData("upload-database/village", jsonData);
-    }
+    // if (
+    //   !hasErrors &&
+    //   selectedFileFormat === "villageData" &&
+    //   jsonStructure.length > 0 &&
+    //   !errors.upload
+    // ) {
+    //   const jsonData = {
+    //     villageData: jsonStructure,
+    //     blockId: villageFormat.taluk,
+    //   };
+    //   uploadData("upload-database/village", jsonData);
+    // }
 
-    if (
-      selectedFileFormat === "garmentType" &&
-      jsonStructure.length > 0 &&
-      !errors.upload
-    ) {
-      const jsonData = { garmentType: jsonStructure };
-      uploadData("upload-database/garment-type", jsonData);
-    }
+    // if (
+    //   selectedFileFormat === "garmentType" &&
+    //   jsonStructure.length > 0 &&
+    //   !errors.upload
+    // ) {
+    //   const jsonData = { garmentType: jsonStructure };
+    //   uploadData("upload-database/garment-type", jsonData);
+    // }
 
-    if (
-      selectedFileFormat === "styleMark" &&
-      jsonStructure.length > 0 &&
-      !errors.upload
-    ) {
-      const jsonData = { styleMark: jsonStructure };
-      uploadData("upload-database/style-mark", jsonData);
-    }
+    // if (
+    //   selectedFileFormat === "styleMark" &&
+    //   jsonStructure.length > 0 &&
+    //   !errors.upload
+    // ) {
+    //   const jsonData = { styleMark: jsonStructure };
+    //   uploadData("upload-database/style-mark", jsonData);
+    // }
 
-    if (
-      selectedFileFormat === "ginnerOrder" &&
-      jsonStructure.length > 0 &&
-      !errors.upload
-    ) {
-      const jsonData = { ginnerOrder: jsonStructure };
-      uploadData("upload-database/ginner-order", jsonData);
-    }
+    // if (
+    //   selectedFileFormat === "ginnerOrder" &&
+    //   jsonStructure.length > 0 &&
+    //   !errors.upload
+    // ) {
+    //   const jsonData = { ginnerOrder: jsonStructure };
+    //   uploadData("upload-database/ginner-order", jsonData);
+    // }
 
-    if (
-      selectedFileFormat === "ginnerExpectedSeed" &&
-      jsonStructure.length > 0 &&
-      !errors.upload
-    ) {
-      const jsonData = { ginnerExpectedSeed: jsonStructure };
-      uploadData("upload-database/ginner-expected", jsonData);
-    }
+    // if (
+    //   selectedFileFormat === "ginnerExpectedSeed" &&
+    //   jsonStructure.length > 0 &&
+    //   !errors.upload
+    // ) {
+    //   const jsonData = { ginnerExpectedSeed: jsonStructure };
+    //   uploadData("upload-database/ginner-expected", jsonData);
+    // }
 
-    if (
-      selectedFileFormat === "processor" &&
-      jsonStructure?.length > 0 &&
-      !errors.upload
-    ) {
-      const jsonData = { processorData: jsonStructure };
-      uploadData("upload-database/processor-list", jsonData);
-    }
+    // if (
+    //   selectedFileFormat === "processor" &&
+    //   jsonStructure?.length > 0 &&
+    //   !errors.upload
+    // ) {
+    //   const jsonData = { processorData: jsonStructure };
+    //   uploadData("upload-database/processor-list", jsonData);
+    // }
 
-    if (
-      selectedFileFormat === "procurement_price" &&
-      jsonStructure?.length > 0 &&
-      !errors.upload
-    ) {
-      const jsonData = { procurementPriceData: jsonStructure };
-      uploadData("upload-database/procurement-price", jsonData);
-    }
+    // if (
+    //   selectedFileFormat === "procurement_price" &&
+    //   jsonStructure?.length > 0 &&
+    //   !errors.upload
+    // ) {
+    //   const jsonData = { procurementPriceData: jsonStructure };
+    //   uploadData("upload-database/procurement-price", jsonData);
+    // }
 
     if (
       selectedFileFormat === "farmers" &&
@@ -450,12 +450,12 @@ export default function page() {
 
       uploadData("upload-database/farmer", jsonStructure);
     }
-
     if (
       selectedFileFormat === "procurement" &&
       jsonStructure.length > 0 &&
       !errors.upload
     ) {
+
       jsonStructure?.forEach((qtyPurchased: any) => {
         if (qtyPurchased.qtyPurchased) {
           qtyPurchased.qtyPurchased = convertWeight(
@@ -474,116 +474,116 @@ export default function page() {
       uploadData("procurement/upload-transactions", jsonData);
     }
 
-    if (
-      selectedFileFormat === "impactData" &&
-      jsonStructure.length > 0 &&
-      !errors.upload
-    ) {
-      const jsonData = { impactData: jsonStructure };
-      uploadData("upload-database/impact/data", jsonData);
-    }
+    // if (
+    //   selectedFileFormat === "impactData" &&
+    //   jsonStructure.length > 0 &&
+    //   !errors.upload
+    // ) {
+    //   const jsonData = { impactData: jsonStructure };
+    //   uploadData("upload-database/impact/data", jsonData);
+    // }
 
-    if (
-      selectedFileFormat === "organic_farmer" &&
-      jsonStructure?.organicFarmers?.length > 0 &&
-      !errors.upload
-    ) {
-      jsonStructure?.organicFarmers?.forEach((organicFarmer: any) => {
-        if (organicFarmer.agriTotalArea) {
-          organicFarmer.agriTotalArea = convertArea(
-            organicFarmer.agriTotalArea,
-            areaTypes.area
-          );
-        }
-        if (organicFarmer.cottonTotalArea) {
-          organicFarmer.cottonTotalArea = convertArea(
-            organicFarmer.cottonTotalArea,
-            areaTypes.area
-          );
-        }
-        if (organicFarmer.agriEstimatedYield) {
-          organicFarmer.agriEstimatedYield = convertYield(
-            organicFarmer.agriEstimatedYield,
-            areaTypes.yield
-          );
-        }
-        if (organicFarmer.agriEstimatedProd) {
-          organicFarmer.agriEstimatedProd = convertWeight(
-            organicFarmer.agriEstimatedProd,
-            areaTypes.weight
-          );
-        }
-        if (organicFarmer.totalEstimatedCotton) {
-          organicFarmer.totalEstimatedCotton = convertWeight(
-            organicFarmer.totalEstimatedCotton,
-            areaTypes.weight
-          );
-        }
-      });
+    // if (
+    //   selectedFileFormat === "organic_farmer" &&
+    //   jsonStructure?.organicFarmers?.length > 0 &&
+    //   !errors.upload
+    // ) {
+    //   jsonStructure?.organicFarmers?.forEach((organicFarmer: any) => {
+    //     if (organicFarmer.agriTotalArea) {
+    //       organicFarmer.agriTotalArea = convertArea(
+    //         organicFarmer.agriTotalArea,
+    //         areaTypes.area
+    //       );
+    //     }
+    //     if (organicFarmer.cottonTotalArea) {
+    //       organicFarmer.cottonTotalArea = convertArea(
+    //         organicFarmer.cottonTotalArea,
+    //         areaTypes.area
+    //       );
+    //     }
+    //     if (organicFarmer.agriEstimatedYield) {
+    //       organicFarmer.agriEstimatedYield = convertYield(
+    //         organicFarmer.agriEstimatedYield,
+    //         areaTypes.yield
+    //       );
+    //     }
+    //     if (organicFarmer.agriEstimatedProd) {
+    //       organicFarmer.agriEstimatedProd = convertWeight(
+    //         organicFarmer.agriEstimatedProd,
+    //         areaTypes.weight
+    //       );
+    //     }
+    //     if (organicFarmer.totalEstimatedCotton) {
+    //       organicFarmer.totalEstimatedCotton = convertWeight(
+    //         organicFarmer.totalEstimatedCotton,
+    //         areaTypes.weight
+    //       );
+    //     }
+    //   });
 
-      uploadData("upload-database/organic-farmer", jsonStructure);
-    }
+    //   uploadData("upload-database/organic-farmer", jsonStructure);
+    // }
 
-    if (
-      selectedFileFormat === "farm_group_evaluation_data" &&
-      jsonStructure.length > 0 &&
-      !errors.upload
-    ) {
-      const jsonData = { farmGroupEvaluationData: jsonStructure };
-      uploadData("upload-database/farm-group-evaluation-data", jsonData);
-    }
+    // if (
+    //   selectedFileFormat === "farm_group_evaluation_data" &&
+    //   jsonStructure.length > 0 &&
+    //   !errors.upload
+    // ) {
+    //   const jsonData = { farmGroupEvaluationData: jsonStructure };
+    //   uploadData("upload-database/farm-group-evaluation-data", jsonData);
+    // }
 
-    if (
-      selectedFileFormat === "ics_quantity_estimation" &&
-      jsonStructure.length > 0 &&
-      !errors.upload
-    ) {
-      const jsonData = { icsQuantityEstimations: jsonStructure };
-      uploadData("upload-database/ics-quantity-estimation", jsonData);
-    }
+    // if (
+    //   selectedFileFormat === "ics_quantity_estimation" &&
+    //   jsonStructure.length > 0 &&
+    //   !errors.upload
+    // ) {
+    //   const jsonData = { icsQuantityEstimations: jsonStructure };
+    //   uploadData("upload-database/ics-quantity-estimation", jsonData);
+    // }
 
-    if (
-      selectedFileFormat === "seed_testing_linkage" &&
-      jsonStructure.length > 0 &&
-      !errors.upload
-    ) {
-      const jsonData = { seedTestingAndLinkages: jsonStructure };
-      uploadData("upload-database/seed-testing-linkage", jsonData);
-    }
+    // if (
+    //   selectedFileFormat === "seed_testing_linkage" &&
+    //   jsonStructure.length > 0 &&
+    //   !errors.upload
+    // ) {
+    //   const jsonData = { seedTestingAndLinkages: jsonStructure };
+    //   uploadData("upload-database/seed-testing-linkage", jsonData);
+    // }
 
-    if (
-      selectedFileFormat === "seed_demand" &&
-      jsonStructure.season && jsonStructure?.seedDemands?.length > 0 &&
-      !errors.upload
-    ) {
-      uploadData("upload-database/seed-demand", jsonStructure);
-    }
+  //   if (
+  //     selectedFileFormat === "seed_demand" &&
+  //     jsonStructure.season && jsonStructure?.seedDemands?.length > 0 &&
+  //     !errors.upload
+  //   ) {
+  //     uploadData("upload-database/seed-demand", jsonStructure);
+  //   }
 
-    if (
-      selectedFileFormat === "seed_availability" &&
-      jsonStructure.season && jsonStructure?.seedAvailabilities?.length > 0 &&
-      !errors.upload
-    ) {
-      uploadData("upload-database/seed-availability", jsonStructure);
-    }
+  //   if (
+  //     selectedFileFormat === "seed_availability" &&
+  //     jsonStructure.season && jsonStructure?.seedAvailabilities?.length > 0 &&
+  //     !errors.upload
+  //   ) {
+  //     uploadData("upload-database/seed-availability", jsonStructure);
+  //   }
 
-    if (
-      selectedFileFormat === "ics_name" &&
-      jsonStructure.length > 0 &&
-      !errors.upload
-    ) {
-      const jsonData = { icsNames: jsonStructure };
-      uploadData("upload-database/ics-name", jsonData);
-    }
+  //   if (
+  //     selectedFileFormat === "ics_name" &&
+  //     jsonStructure.length > 0 &&
+  //     !errors.upload
+  //   ) {
+  //     const jsonData = { icsNames: jsonStructure };
+  //     uploadData("upload-database/ics-name", jsonData);
+  //   }
 
-    if (
-      selectedFileFormat === "integrity_test" &&
-      jsonStructure.length > 0 &&
-      !errors.upload
-    ) {
-      const jsonData = { integrityTests: jsonStructure };
-      uploadData("upload-database/integrity-test", jsonData);
-    }
+  //   if (
+  //     selectedFileFormat === "integrity_test" &&
+  //     jsonStructure.length > 0 &&
+  //     !errors.upload
+  //   ) {
+  //     const jsonData = { integrityTests: jsonStructure };
+  //     uploadData("upload-database/integrity-test", jsonData);
+  //   }
   };
 
   const convertArea = (value: any, unit: any) => {
@@ -822,6 +822,7 @@ export default function page() {
               first_name: "firstName",
               last_name: "lastName",
               farmer_code: "farmerCode",
+              riceVarierty: "riceVarierty",
               country: "country",
               state: "state",
               district: "district",
@@ -830,8 +831,8 @@ export default function page() {
               estimated_yield_kgac: "agriEstimatedYield",
               ics_name: "icsName",
               total_agriculture_area: "agriTotalArea",
-              total_cotton_area: "cottonTotalArea",
-              total_estimated_cotton: "totalEstimatedCotton",
+              total_paddy_area: "paddyTotalArea",
+              total_estimated_paddy: "totalEstimatedPaddy",
               total_estimated_production: "agriEstimatedProd",
               tracenet_id: "tracenetId",
               village: "village",
@@ -847,13 +848,13 @@ export default function page() {
           const headersComplex = [];
           const rows = [];
 
-          for (let C = range.s.c; C <= range.e.c && C < 10; ++C) {
+          for (let C = range.s.c; C <= range.e.c && C < 11; ++C) {
             const cellAddress = XLSX.utils.encode_cell({ r: 4, c: C });
             const header = convertHeaderName(sheet[cellAddress]?.v); // Preprocess the header
             headersComplex.push(header);
           }
 
-          for (let C = 10; C <= range.e.c; ++C) {
+          for (let C = 11; C <= range.e.c; ++C) {
             const cellAddress = XLSX.utils.encode_cell({ r: 5, c: C });
             const header = convertHeaderName(sheet[cellAddress]?.v); // Preprocess the header
             headersComplex.push(header);
@@ -871,24 +872,24 @@ export default function page() {
           const farmersData = rows;
           farmersData.forEach((farmer: any) => {
             if (farmer.dateOfJoining) {
-              farmer.dateOfJoining = convertNumericToDate(farmer.dateOfJoining);
+              farmer.dateOfJoining = convertNumericToDate(farmer?.dateOfJoining);
             }
-            farmer.certStatus = farmer.certStatus;
+            farmer.certStatus = farmer?.certStatus;
             farmer.agriTotalArea =
               farmer?.agriTotalArea === "" ? 0 : farmer?.agriTotalArea;
             farmer.agriEstimatedYield =
               farmer?.agriEstimatedYield === ""
                 ? 0
                 : farmer?.agriEstimatedYield;
-            farmer.cottonTotalArea =
-              farmer?.cottonTotalArea === "" ? 0 : farmer?.cottonTotalArea;
-            farmer.totalEstimatedCotton =
-              farmer?.totalEstimatedCotton === ""
+            farmer.paddyTotalArea =
+              farmer?.paddyTotalArea === "" ? 0 : farmer?.paddyTotalArea;
+            farmer.totalEstimatedPaddy =
+              farmer?.totalEstimatedPaddy === ""
                 ? 0
-                : farmer?.totalEstimatedCotton;
+                : farmer?.totalEstimatedPaddy;
             farmer.agriEstimatedProd =
               farmer?.agriEstimatedProd === "" ? 0 : farmer?.agriEstimatedProd;
-            farmer.farmerCode = farmer?.farmerCode.toString();
+            farmer.farmerCode = farmer?.farmerCode?.toString();
           });
 
           const jsonData = {
@@ -902,6 +903,7 @@ export default function page() {
             "firstName",
             "lastName",
             "farmerCode",
+            "rice_variety",
             "country",
             "state",
             "district",
@@ -910,13 +912,13 @@ export default function page() {
             "agriTotalArea",
             "agriEstimatedYield",
             "agriEstimatedProd",
-            "cottonTotalArea",
-            "totalEstimatedCotton",
+            "paddyTotalArea",
+            "totalEstimatedPaddy",
             "tracenetId",
             "icsName",
             "certStatus",
           ];
-
+          
           if (!validateHeaders(headersComplex, expectedHeaders)) {
             setErrors((prevError: any) => ({
               ...prevError,
@@ -942,355 +944,357 @@ export default function page() {
           }
         };
         reader.readAsArrayBuffer(file);
-      } else if (selectedFileFormat === "organic_farmer") {
-        setIsSelected(true);
-        const reader = new FileReader();
-        reader.onload = async (e: any) => {
-          const data = new Uint8Array(e.target.result);
-          const workbook = XLSX.read(data, { type: "array" });
+      } 
+      // else if (selectedFileFormat === "organic_farmer") {
+      //   setIsSelected(true);
+      //   const reader = new FileReader();
+      //   reader.onload = async (e: any) => {
+      //     const data = new Uint8Array(e.target.result);
+      //     const workbook = XLSX.read(data, { type: "array" });
 
-          const sheetName = workbook.SheetNames[0];
-          const sheet: any = workbook.Sheets[sheetName];
+      //     const sheetName = workbook.SheetNames[0];
+      //     const sheet: any = workbook.Sheets[sheetName];
 
-          const json: any = {};
-          for (let row = 1; row <= 4; row++) {
-            const headerCell = sheet["A" + row];
-            const valueCell = sheet["B" + row];
+      //     const json: any = {};
+      //     for (let row = 1; row <= 4; row++) {
+      //       const headerCell = sheet["A" + row];
+      //       const valueCell = sheet["B" + row];
 
-            if (headerCell && valueCell) {
-              const header = headerCell.v; // Remove extra spaces
-              const value = valueCell.v;
+      //       if (headerCell && valueCell) {
+      //         const header = headerCell.v; // Remove extra spaces
+      //         const value = valueCell.v;
 
-              const key = headerMapping[header] || header;
-              json[key] = value;
-            }
-          }
+      //         const key = headerMapping[header] || header;
+      //         json[key] = value;
+      //       }
+      //     }
 
-          const convertHeaderName = (header: string) => {
-            const headerMappingsComplex: { [key: string]: string; } = {
-              date_of_joining: "dateOfJoining",
-              first_name: "firstName",
-              last_name: "lastName",
-              farmer_code: "farmerCode",
-              country: "country",
-              state: "state",
-              district: "district",
-              talukblocktehsil: "block",
-              village: "village",
-              total_agriculture_area: "agriTotalArea",
-              estimated_yield_kgac: "agriEstimatedYield",
-              total_estimated_production: "agriEstimatedProd",
-              total_cotton_area: "cottonTotalArea",
-              total_estimated_cotton: "totalEstimatedCotton",
-              tracenet_id: "tracenetId",
-              ics_name: "icsName",
-              certification_status: "certStatus",
-              cluster: "cluster",
-              seed_packet_quantity: "seedPacketQuantity",
-              variety: "variety",
-              lot_no: "lotNo",
-              date_of_distibution: "dateOfDistibution",
-              source_of_seed_seed_company_producerany_other_specify: "sourceOfSeedSeedCompanyProducerAnyOtherSpecify"
-            };
+      //     const convertHeaderName = (header: string) => {
+      //       const headerMappingsComplex: { [key: string]: string; } = {
+      //         date_of_joining: "dateOfJoining",
+      //         first_name: "firstName",
+      //         last_name: "lastName",
+      //         farmer_code: "farmerCode",
+      //         country: "country",
+      //         state: "state",
+      //         district: "district",
+      //         talukblocktehsil: "block",
+      //         village: "village",
+      //         total_agriculture_area: "agriTotalArea",
+      //         estimated_yield_kgac: "agriEstimatedYield",
+      //         total_estimated_production: "agriEstimatedProd",
+      //         total_cotton_area: "cottonTotalArea",
+      //         total_estimated_cotton: "totalEstimatedCotton",
+      //         tracenet_id: "tracenetId",
+      //         ics_name: "icsName",
+      //         certification_status: "certStatus",
+      //         cluster: "cluster",
+      //         seed_packet_quantity: "seedPacketQuantity",
+      //         variety: "variety",
+      //         lot_no: "lotNo",
+      //         date_of_distibution: "dateOfDistibution",
+      //         source_of_seed_seed_company_producerany_other_specify: "sourceOfSeedSeedCompanyProducerAnyOtherSpecify"
+      //       };
 
-            const preprocessedHeader =
-              typeof header === "string" ? preprocessHeader(header) : ""; // Preprocess the header name
+      //       const preprocessedHeader =
+      //         typeof header === "string" ? preprocessHeader(header) : ""; // Preprocess the header name
 
-            return (headerMappingsComplex[preprocessedHeader] || preprocessedHeader);
-          };
+      //       return (headerMappingsComplex[preprocessedHeader] || preprocessedHeader);
+      //     };
 
-          const range = XLSX.utils.decode_range(sheet["!ref"]);
-          const headersComplex = [];
-          const rows = [];
+      //     const range = XLSX.utils.decode_range(sheet["!ref"]);
+      //     const headersComplex = [];
+      //     const rows = [];
 
-          for (let C = range.s.c; C <= range.e.c && C < 10; ++C) {
-            const cellAddress = XLSX.utils.encode_cell({ r: 4, c: C });
-            const header = convertHeaderName(sheet[cellAddress]?.v); // Preprocess the header
-            headersComplex.push(header);
-          }
+      //     for (let C = range.s.c; C <= range.e.c && C < 10; ++C) {
+      //       const cellAddress = XLSX.utils.encode_cell({ r: 4, c: C });
+      //       const header = convertHeaderName(sheet[cellAddress]?.v); // Preprocess the header
+      //       headersComplex.push(header);
+      //     }
 
-          for (let C = 10; C <= range.e.c; ++C) {
-            const cellAddress = XLSX.utils.encode_cell({ r: 5, c: C });
-            const header = convertHeaderName(sheet[cellAddress]?.v); // Preprocess the header
-            headersComplex.push(header);
-          }
+      //     for (let C = 10; C <= range.e.c; ++C) {
+      //       const cellAddress = XLSX.utils.encode_cell({ r: 5, c: C });
+      //       const header = convertHeaderName(sheet[cellAddress]?.v); // Preprocess the header
+      //       headersComplex.push(header);
+      //     }
 
-          for (let R = range.s.r + 6; R <= range.e.r; ++R) {
-            const row: any = {};
-            for (let C = 0; C <= range.e.c; ++C) {
-              const cellAddress = XLSX.utils.encode_cell({ r: R, c: C });
-              row[headersComplex[C]] = sheet[cellAddress]?.v || "";
-            }
-            rows.push(row);
-          }
+      //     for (let R = range.s.r + 6; R <= range.e.r; ++R) {
+      //       const row: any = {};
+      //       for (let C = 0; C <= range.e.c; ++C) {
+      //         const cellAddress = XLSX.utils.encode_cell({ r: R, c: C });
+      //         row[headersComplex[C]] = sheet[cellAddress]?.v || "";
+      //       }
+      //       rows.push(row);
+      //     }
 
-          const organicFarmersData = rows;
-          organicFarmersData.forEach((organicFarmer: any) => {
-            if (organicFarmer.dateOfJoining) {
-              organicFarmer.dateOfJoining = convertNumericToDate(organicFarmer.dateOfJoining);
-            }
-            if (organicFarmer.dateOfDistibution) {
-              organicFarmer.dateOfDistibution = convertNumericToDate(organicFarmer.dateOfDistibution);
-            }
-            organicFarmer.certStatus = organicFarmer.certStatus;
-            organicFarmer.agriTotalArea = organicFarmer?.agriTotalArea === "" ? 0 : organicFarmer?.agriTotalArea;
-            organicFarmer.agriEstimatedYield = organicFarmer?.agriEstimatedYield === "" ? 0 : organicFarmer?.agriEstimatedYield;
-            organicFarmer.cottonTotalArea = organicFarmer?.cottonTotalArea === "" ? 0 : organicFarmer?.cottonTotalArea;
-            organicFarmer.totalEstimatedCotton = organicFarmer?.totalEstimatedCotton === "" ? 0 : organicFarmer?.totalEstimatedCotton;
-            organicFarmer.agriEstimatedProd = organicFarmer?.agriEstimatedProd === "" ? 0 : organicFarmer?.agriEstimatedProd;
-            organicFarmer.farmerCode = organicFarmer?.farmerCode.toString();
-          });
+      //     const organicFarmersData = rows;
+      //     organicFarmersData.forEach((organicFarmer: any) => {
+      //       if (organicFarmer.dateOfJoining) {
+      //         organicFarmer.dateOfJoining = convertNumericToDate(organicFarmer.dateOfJoining);
+      //       }
+      //       if (organicFarmer.dateOfDistibution) {
+      //         organicFarmer.dateOfDistibution = convertNumericToDate(organicFarmer.dateOfDistibution);
+      //       }
+      //       organicFarmer.certStatus = organicFarmer.certStatus;
+      //       organicFarmer.agriTotalArea = organicFarmer?.agriTotalArea === "" ? 0 : organicFarmer?.agriTotalArea;
+      //       organicFarmer.agriEstimatedYield = organicFarmer?.agriEstimatedYield === "" ? 0 : organicFarmer?.agriEstimatedYield;
+      //       organicFarmer.cottonTotalArea = organicFarmer?.cottonTotalArea === "" ? 0 : organicFarmer?.cottonTotalArea;
+      //       organicFarmer.totalEstimatedCotton = organicFarmer?.totalEstimatedCotton === "" ? 0 : organicFarmer?.totalEstimatedCotton;
+      //       organicFarmer.agriEstimatedProd = organicFarmer?.agriEstimatedProd === "" ? 0 : organicFarmer?.agriEstimatedProd;
+      //       organicFarmer.farmerCode = organicFarmer?.farmerCode.toString();
+      //     });
 
-          const jsonData = {
-            ...json,
-            organicFarmers: organicFarmersData,
-          };
+      //     const jsonData = {
+      //       ...json,
+      //       organicFarmers: organicFarmersData,
+      //     };
 
-          const expectedHeaders = [
-            "sno",
-            "dateOfJoining",
-            "firstName",
-            "lastName",
-            "farmerCode",
-            "country",
-            "state",
-            "district",
-            "block",
-            "village",
-            "agriTotalArea",
-            "agriEstimatedYield",
-            "agriEstimatedProd",
-            "cottonTotalArea",
-            "totalEstimatedCotton",
-            "tracenetId",
-            "icsName",
-            "certStatus",
-            "cluster",
-            "seedPacketQuantity",
-            "variety",
-            "lotNo",
-            "dateOfDistibution",
-            "sourceOfSeedSeedCompanyProducerAnyOtherSpecify"
-          ];
+      //     const expectedHeaders = [
+      //       "sno",
+      //       "dateOfJoining",
+      //       "firstName",
+      //       "lastName",
+      //       "farmerCode",
+      //       "country",
+      //       "state",
+      //       "district",
+      //       "block",
+      //       "village",
+      //       "agriTotalArea",
+      //       "agriEstimatedYield",
+      //       "agriEstimatedProd",
+      //       "cottonTotalArea",
+      //       "totalEstimatedCotton",
+      //       "tracenetId",
+      //       "icsName",
+      //       "certStatus",
+      //       "cluster",
+      //       "seedPacketQuantity",
+      //       "variety",
+      //       "lotNo",
+      //       "dateOfDistibution",
+      //       "sourceOfSeedSeedCompanyProducerAnyOtherSpecify"
+      //     ];
 
-          if (!validateHeaders(headersComplex, expectedHeaders)) {
-            setErrors((prevError: any) => ({
-              ...prevError,
-              upload: "Wrong Format.",
-            }));
-            setIsSelected(false);
-            return false;
-          } else {
-            setJsonStructure(jsonData);
-            setIsSelected(false);
-            if (jsonData.organicFarmers.length === 0) {
-              setErrors((prevError: any) => ({
-                ...prevError,
-                upload: "The file you selected is empty",
-              }));
-              return false;
-            } else {
-              setErrors((prevError: any) => ({
-                ...prevError,
-                upload: "",
-              }));
-            }
-          }
-        }
-        reader.readAsArrayBuffer(file);
-      } else if (selectedFileFormat === "seed_demand") {
-        setIsSelected(true);
-        const reader = new FileReader();
-        reader.onload = async (e: any) => {
-          const data = new Uint8Array(e.target.result);
-          const workbook = XLSX.read(data, { type: "array" });
+      //     if (!validateHeaders(headersComplex, expectedHeaders)) {
+      //       setErrors((prevError: any) => ({
+      //         ...prevError,
+      //         upload: "Wrong Format.",
+      //       }));
+      //       setIsSelected(false);
+      //       return false;
+      //     } else {
+      //       setJsonStructure(jsonData);
+      //       setIsSelected(false);
+      //       if (jsonData.organicFarmers.length === 0) {
+      //         setErrors((prevError: any) => ({
+      //           ...prevError,
+      //           upload: "The file you selected is empty",
+      //         }));
+      //         return false;
+      //       } else {
+      //         setErrors((prevError: any) => ({
+      //           ...prevError,
+      //           upload: "",
+      //         }));
+      //       }
+      //     }
+      //   }
+      //   reader.readAsArrayBuffer(file);
+      // } else if (selectedFileFormat === "seed_demand") {
+      //   setIsSelected(true);
+      //   const reader = new FileReader();
+      //   reader.onload = async (e: any) => {
+      //     const data = new Uint8Array(e.target.result);
+      //     const workbook = XLSX.read(data, { type: "array" });
 
-          const sheetName = workbook.SheetNames[0];
-          const sheet: any = workbook.Sheets[sheetName];
+      //     const sheetName = workbook.SheetNames[0];
+      //     const sheet: any = workbook.Sheets[sheetName];
 
-          const json: any = {};
-          for (let row = 1; row <= 1; row++) {
-            const headerCell = sheet["A" + row];
-            const valueCell = sheet["B" + row];
+      //     const json: any = {};
+      //     for (let row = 1; row <= 1; row++) {
+      //       const headerCell = sheet["A" + row];
+      //       const valueCell = sheet["B" + row];
 
-            if (headerCell && valueCell) {
-              const header = headerCell.v;
-              const value = valueCell.v;
+      //       if (headerCell && valueCell) {
+      //         const header = headerCell.v;
+      //         const value = valueCell.v;
 
-              const key = headerMapping[header] || header;
-              json[key] = value;
-            }
-          }
+      //         const key = headerMapping[header] || header;
+      //         json[key] = value;
+      //       }
+      //     }
 
-          const convertHeaderName = (header: string) => {
-            const headerMappingsComplex: { [key: string]: string; } = {
-              project_name: "projectName",
-              seed_company_name: "seedCompanyName",
-              seed_variety: "seedVariety",
-              numbers_of_packets: "numbersOfPackets",
-              projects_location: "projectsLocation",
-              suggestion_remark: "suggestionRemark"
-            };
+      //     const convertHeaderName = (header: string) => {
+      //       const headerMappingsComplex: { [key: string]: string; } = {
+      //         project_name: "projectName",
+      //         seed_company_name: "seedCompanyName",
+      //         seed_variety: "seedVariety",
+      //         numbers_of_packets: "numbersOfPackets",
+      //         projects_location: "projectsLocation",
+      //         suggestion_remark: "suggestionRemark"
+      //       };
 
-            const preprocessedHeader = typeof header === "string" ? preprocessHeader(header) : "";
-            return (headerMappingsComplex[preprocessedHeader] || preprocessedHeader);
-          };
+      //       const preprocessedHeader = typeof header === "string" ? preprocessHeader(header) : "";
+      //       return (headerMappingsComplex[preprocessedHeader] || preprocessedHeader);
+      //     };
 
-          const range = XLSX.utils.decode_range(sheet["!ref"]);
-          const headersComplex = [];
-          const rows = [];
+      //     const range = XLSX.utils.decode_range(sheet["!ref"]);
+      //     const headersComplex = [];
+      //     const rows = [];
 
-          for (let C = range.s.c; C <= range.e.c; ++C) {
-            const cellAddress = XLSX.utils.encode_cell({ r: 1, c: C });
-            const header = convertHeaderName(sheet[cellAddress]?.v);
-            headersComplex.push(header);
-          }
+      //     for (let C = range.s.c; C <= range.e.c; ++C) {
+      //       const cellAddress = XLSX.utils.encode_cell({ r: 1, c: C });
+      //       const header = convertHeaderName(sheet[cellAddress]?.v);
+      //       headersComplex.push(header);
+      //     }
 
-          for (let R = range.s.r + 2; R <= range.e.r; ++R) {
-            const row: any = {};
-            for (let C = 0; C <= range.e.c; ++C) {
-              const cellAddress = XLSX.utils.encode_cell({ r: R, c: C });
-              row[headersComplex[C]] = sheet[cellAddress]?.v || "";
-            }
-            rows.push(row);
-          }
+      //     for (let R = range.s.r + 2; R <= range.e.r; ++R) {
+      //       const row: any = {};
+      //       for (let C = 0; C <= range.e.c; ++C) {
+      //         const cellAddress = XLSX.utils.encode_cell({ r: R, c: C });
+      //         row[headersComplex[C]] = sheet[cellAddress]?.v || "";
+      //       }
+      //       rows.push(row);
+      //     }
 
-          const jsonData = {
-            ...json,
-            seedDemands: rows,
-          };
+      //     const jsonData = {
+      //       ...json,
+      //       seedDemands: rows,
+      //     };
 
-          const expectedHeaders = [
-            "sr_no",
-            "projectName",
-            "seedCompanyName",
-            "seedVariety",
-            "numbersOfPackets",
-            "projectsLocation",
-            "suggestionRemark"
-          ];
+      //     const expectedHeaders = [
+      //       "sr_no",
+      //       "projectName",
+      //       "seedCompanyName",
+      //       "seedVariety",
+      //       "numbersOfPackets",
+      //       "projectsLocation",
+      //       "suggestionRemark"
+      //     ];
 
-          if (!validateHeaders(headersComplex, expectedHeaders)) {
-            setErrors((prevError: any) => ({
-              ...prevError,
-              upload: "Wrong Format.",
-            }));
-            setIsSelected(false);
-            return false;
-          } else {
-            setJsonStructure(jsonData);
-            setIsSelected(false);
-            if (!jsonData.season || jsonData.seedDemands.length === 0) {
-              setErrors((prevError: any) => ({
-                ...prevError,
-                upload: "The file you selected is empty or missing some values",
-              }));
-              return false;
-            } else {
-              setErrors((prevError: any) => ({
-                ...prevError,
-                upload: "",
-              }));
-            }
-          }
-        }
-        reader.readAsArrayBuffer(file);
-      } else if (selectedFileFormat === "seed_availability") {
-        setIsSelected(true);
-        const reader = new FileReader();
-        reader.onload = async (e: any) => {
-          const data = new Uint8Array(e.target.result);
-          const workbook = XLSX.read(data, { type: "array" });
+      //     if (!validateHeaders(headersComplex, expectedHeaders)) {
+      //       setErrors((prevError: any) => ({
+      //         ...prevError,
+      //         upload: "Wrong Format.",
+      //       }));
+      //       setIsSelected(false);
+      //       return false;
+      //     } else {
+      //       setJsonStructure(jsonData);
+      //       setIsSelected(false);
+      //       if (!jsonData.season || jsonData.seedDemands.length === 0) {
+      //         setErrors((prevError: any) => ({
+      //           ...prevError,
+      //           upload: "The file you selected is empty or missing some values",
+      //         }));
+      //         return false;
+      //       } else {
+      //         setErrors((prevError: any) => ({
+      //           ...prevError,
+      //           upload: "",
+      //         }));
+      //       }
+      //     }
+      //   }
+      //   reader.readAsArrayBuffer(file);
+      // } else if (selectedFileFormat === "seed_availability") {
+      //   setIsSelected(true);
+      //   const reader = new FileReader();
+      //   reader.onload = async (e: any) => {
+      //     const data = new Uint8Array(e.target.result);
+      //     const workbook = XLSX.read(data, { type: "array" });
 
-          const sheetName = workbook.SheetNames[0];
-          const sheet: any = workbook.Sheets[sheetName];
+      //     const sheetName = workbook.SheetNames[0];
+      //     const sheet: any = workbook.Sheets[sheetName];
 
-          const json: any = {};
-          for (let row = 1; row <= 1; row++) {
-            const headerCell = sheet["A" + row];
-            const valueCell = sheet["B" + row];
+      //     const json: any = {};
+      //     for (let row = 1; row <= 1; row++) {
+      //       const headerCell = sheet["A" + row];
+      //       const valueCell = sheet["B" + row];
 
-            if (headerCell && valueCell) {
-              const header = headerCell.v;
-              const value = valueCell.v;
+      //       if (headerCell && valueCell) {
+      //         const header = headerCell.v;
+      //         const value = valueCell.v;
 
-              const key = headerMapping[header] || header;
-              json[key] = value;
-            }
-          }
+      //         const key = headerMapping[header] || header;
+      //         json[key] = value;
+      //       }
+      //     }
 
-          const convertHeaderName = (header: string) => {
-            const headerMappingsComplex: { [key: string]: string; } = {
-              seed_company_name: "seedCompanyName",
-              lot_no: "lotNo",
-              variety: "variety",
-              pkt450gm: "pkt450gm",
-              state: "state"
-            };
+      //     const convertHeaderName = (header: string) => {
+      //       const headerMappingsComplex: { [key: string]: string; } = {
+      //         seed_company_name: "seedCompanyName",
+      //         lot_no: "lotNo",
+      //         variety: "variety",
+      //         pkt450gm: "pkt450gm",
+      //         state: "state"
+      //       };
 
-            const preprocessedHeader = typeof header === "string" ? preprocessHeader(header) : "";
-            return (headerMappingsComplex[preprocessedHeader] || preprocessedHeader);
-          };
+      //       const preprocessedHeader = typeof header === "string" ? preprocessHeader(header) : "";
+      //       return (headerMappingsComplex[preprocessedHeader] || preprocessedHeader);
+      //     };
 
-          const range = XLSX.utils.decode_range(sheet["!ref"]);
-          const headersComplex = [];
-          const rows = [];
+      //     const range = XLSX.utils.decode_range(sheet["!ref"]);
+      //     const headersComplex = [];
+      //     const rows = [];
 
-          for (let C = range.s.c; C <= range.e.c; ++C) {
-            const cellAddress = XLSX.utils.encode_cell({ r: 1, c: C });
-            const header = convertHeaderName(sheet[cellAddress]?.v);
-            headersComplex.push(header);
-          }
+      //     for (let C = range.s.c; C <= range.e.c; ++C) {
+      //       const cellAddress = XLSX.utils.encode_cell({ r: 1, c: C });
+      //       const header = convertHeaderName(sheet[cellAddress]?.v);
+      //       headersComplex.push(header);
+      //     }
 
-          for (let R = range.s.r + 2; R <= range.e.r; ++R) {
-            const row: any = {};
-            for (let C = 0; C <= range.e.c; ++C) {
-              const cellAddress = XLSX.utils.encode_cell({ r: R, c: C });
-              row[headersComplex[C]] = sheet[cellAddress]?.v || "";
-            }
-            rows.push(row);
-          }
+      //     for (let R = range.s.r + 2; R <= range.e.r; ++R) {
+      //       const row: any = {};
+      //       for (let C = 0; C <= range.e.c; ++C) {
+      //         const cellAddress = XLSX.utils.encode_cell({ r: R, c: C });
+      //         row[headersComplex[C]] = sheet[cellAddress]?.v || "";
+      //       }
+      //       rows.push(row);
+      //     }
 
-          const jsonData = {
-            ...json,
-            seedAvailabilities: rows,
-          };
+      //     const jsonData = {
+      //       ...json,
+      //       seedAvailabilities: rows,
+      //     };
 
-          const expectedHeaders = [
-            "_sr_no",
-            "seedCompanyName",
-            "lotNo",
-            "variety",
-            "pkt450gm",
-            "state"
-          ];
+      //     const expectedHeaders = [
+      //       "_sr_no",
+      //       "seedCompanyName",
+      //       "lotNo",
+      //       "variety",
+      //       "pkt450gm",
+      //       "state"
+      //     ];
 
-          if (!validateHeaders(headersComplex, expectedHeaders)) {
-            setErrors((prevError: any) => ({
-              ...prevError,
-              upload: "Wrong Format.",
-            }));
-            setIsSelected(false);
-            return false;
-          } else {
-            setJsonStructure(jsonData);
-            setIsSelected(false);
-            if (!jsonData.season || jsonData.seedAvailabilities.length === 0) {
-              setErrors((prevError: any) => ({
-                ...prevError,
-                upload: "The file you selected is empty or missing some values",
-              }));
-              return false;
-            } else {
-              setErrors((prevError: any) => ({
-                ...prevError,
-                upload: "",
-              }));
-            }
-          }
-        }
-        reader.readAsArrayBuffer(file);
-      } else {
+      //     if (!validateHeaders(headersComplex, expectedHeaders)) {
+      //       setErrors((prevError: any) => ({
+      //         ...prevError,
+      //         upload: "Wrong Format.",
+      //       }));
+      //       setIsSelected(false);
+      //       return false;
+      //     } else {
+      //       setJsonStructure(jsonData);
+      //       setIsSelected(false);
+      //       if (!jsonData.season || jsonData.seedAvailabilities.length === 0) {
+      //         setErrors((prevError: any) => ({
+      //           ...prevError,
+      //           upload: "The file you selected is empty or missing some values",
+      //         }));
+      //         return false;
+      //       } else {
+      //         setErrors((prevError: any) => ({
+      //           ...prevError,
+      //           upload: "",
+      //         }));
+      //       }
+      //     }
+      //   }
+      //   reader.readAsArrayBuffer(file);
+      // } 
+      else {
         const workbook = XLSX.read(await file.arrayBuffer(), { type: "buffer" });
         const sheetName = workbook.SheetNames[0];
         const sheet = workbook.Sheets[sheetName];
@@ -1298,182 +1302,182 @@ export default function page() {
 
         const excelHeaders = jsonData.length > 0 ? Object.keys(jsonData[0]) : [];
 
-        if (selectedFileFormat === "villageData") {
-          const newJsonStructure: any = jsonData.map((item: any) => ({
-            village: item["Village Name"],
-          }));
+        // if (selectedFileFormat === "villageData") {
+        //   const newJsonStructure: any = jsonData.map((item: any) => ({
+        //     village: item["Village Name"],
+        //   }));
 
-          const expectedHeaders = ["Sno", "Village Name"];
-          if (!validateHeaders(excelHeaders, expectedHeaders)) {
-            setErrors((prevError: any) => ({
-              ...prevError,
-              upload: "Wrong Format.",
-            }));
-            return false;
-          } else {
-            setJsonStructure(newJsonStructure);
-            if (newJsonStructure.length === 0) {
-              setErrors((prevError: any) => ({
-                ...prevError,
-                upload: "The file you selected is empty",
-              }));
-              return false;
-            } else {
-              setErrors((prevError: any) => ({
-                ...prevError,
-                upload: "",
-              }));
-            }
-          }
-        }
+        //   const expectedHeaders = ["Sno", "Village Name"];
+        //   if (!validateHeaders(excelHeaders, expectedHeaders)) {
+        //     setErrors((prevError: any) => ({
+        //       ...prevError,
+        //       upload: "Wrong Format.",
+        //     }));
+        //     return false;
+        //   } else {
+        //     setJsonStructure(newJsonStructure);
+        //     if (newJsonStructure.length === 0) {
+        //       setErrors((prevError: any) => ({
+        //         ...prevError,
+        //         upload: "The file you selected is empty",
+        //       }));
+        //       return false;
+        //     } else {
+        //       setErrors((prevError: any) => ({
+        //         ...prevError,
+        //         upload: "",
+        //       }));
+        //     }
+        //   }
+        // }
 
-        if (selectedFileFormat === "garmentType") {
-          const newJsonStructure: any = jsonData.map((item: any) => ({
-            name: String(item["name"]),
-          }));
+        // if (selectedFileFormat === "garmentType") {
+        //   const newJsonStructure: any = jsonData.map((item: any) => ({
+        //     name: String(item["name"]),
+        //   }));
 
-          const expectedHeaders = ["id", "name"];
-          if (!validateHeaders(excelHeaders, expectedHeaders)) {
-            setErrors((prevError: any) => ({
-              ...prevError,
-              upload: "Wrong Format.",
-            }));
-            return false;
-          } else {
-            setJsonStructure(newJsonStructure);
-            if (newJsonStructure.length === 0) {
-              setErrors((prevError: any) => ({
-                ...prevError,
-                upload: "The file you selected is empty",
-              }));
-              return false;
-            } else {
-              setErrors((prevError: any) => ({
-                ...prevError,
-                upload: "",
-              }));
-            }
-          }
-        }
+        //   const expectedHeaders = ["id", "name"];
+        //   if (!validateHeaders(excelHeaders, expectedHeaders)) {
+        //     setErrors((prevError: any) => ({
+        //       ...prevError,
+        //       upload: "Wrong Format.",
+        //     }));
+        //     return false;
+        //   } else {
+        //     setJsonStructure(newJsonStructure);
+        //     if (newJsonStructure.length === 0) {
+        //       setErrors((prevError: any) => ({
+        //         ...prevError,
+        //         upload: "The file you selected is empty",
+        //       }));
+        //       return false;
+        //     } else {
+        //       setErrors((prevError: any) => ({
+        //         ...prevError,
+        //         upload: "",
+        //       }));
+        //     }
+        //   }
+        // }
 
-        if (selectedFileFormat === "ginnerOrder") {
-          const convertedData = jsonData.map((item: any) => ({
-            season: item["Season"],
-            uploadDate: item["Upload Date"],
-            ginningMill: item["Ginning Mill"],
-            brand: item["Brand"],
-            program: item["Program"],
-            confirmedBales: item["Confirmed No of Bags Order in Hand"],
-            confirmedLintOrder: item["Confirmed Lint Order in Hand MT"],
-          }));
+        // if (selectedFileFormat === "ginnerOrder") {
+        //   const convertedData = jsonData.map((item: any) => ({
+        //     season: item["Season"],
+        //     uploadDate: item["Upload Date"],
+        //     ginningMill: item["Ginning Mill"],
+        //     brand: item["Brand"],
+        //     program: item["Program"],
+        //     confirmedBales: item["Confirmed No of Bags Order in Hand"],
+        //     confirmedLintOrder: item["Confirmed Lint Order in Hand MT"],
+        //   }));
 
-          convertedData.forEach((data: any) => {
-            if (data.uploadDate) {
-              data.uploadDate = convertNumericToDate(data.uploadDate);
-            }
-          });
+        //   convertedData.forEach((data: any) => {
+        //     if (data.uploadDate) {
+        //       data.uploadDate = convertNumericToDate(data.uploadDate);
+        //     }
+        //   });
 
-          const expectedHeaders = [
-            "Season",
-            "Upload Date",
-            "Ginning Mill",
-            "Brand",
-            "Program",
-            "Confirmed No of Bags Order in Hand",
-            "Confirmed Lint Order in Hand MT",
-          ];
-          if (!validateHeaders(excelHeaders, expectedHeaders)) {
-            setErrors((prevError: any) => ({
-              ...prevError,
-              upload: "Wrong Format.",
-            }));
-            return false;
-          } else {
-            setJsonStructure(convertedData);
-            if (convertedData.length === 0) {
-              setErrors((prevError: any) => ({
-                ...prevError,
-                upload: "The file you selected is empty",
-              }));
-              return false;
-            } else {
-              setErrors((prevError: any) => ({
-                ...prevError,
-                upload: "",
-              }));
-            }
-          }
-        }
+        //   const expectedHeaders = [
+        //     "Season",
+        //     "Upload Date",
+        //     "Ginning Mill",
+        //     "Brand",
+        //     "Program",
+        //     "Confirmed No of Bags Order in Hand",
+        //     "Confirmed Lint Order in Hand MT",
+        //   ];
+        //   if (!validateHeaders(excelHeaders, expectedHeaders)) {
+        //     setErrors((prevError: any) => ({
+        //       ...prevError,
+        //       upload: "Wrong Format.",
+        //     }));
+        //     return false;
+        //   } else {
+        //     setJsonStructure(convertedData);
+        //     if (convertedData.length === 0) {
+        //       setErrors((prevError: any) => ({
+        //         ...prevError,
+        //         upload: "The file you selected is empty",
+        //       }));
+        //       return false;
+        //     } else {
+        //       setErrors((prevError: any) => ({
+        //         ...prevError,
+        //         upload: "",
+        //       }));
+        //     }
+        //   }
+        // }
 
-        if (selectedFileFormat === "ginnerExpectedSeed") {
-          const convertedData = jsonData.map((item: any) => ({
-            season: item["Season"],
-            ginningMill: item["Ginning Mill"],
-            brand: item["Brand"],
-            program: item["Program"],
-            expectedSeedCotton: item["Expected Seed Cotton (KG)"],
-            expectedLint: item["Expected Lint in MT"],
-          }));
+        // if (selectedFileFormat === "ginnerExpectedSeed") {
+        //   const convertedData = jsonData.map((item: any) => ({
+        //     season: item["Season"],
+        //     ginningMill: item["Ginning Mill"],
+        //     brand: item["Brand"],
+        //     program: item["Program"],
+        //     expectedSeedCotton: item["Expected Seed Cotton (KG)"],
+        //     expectedLint: item["Expected Lint in MT"],
+        //   }));
 
-          const expectedHeaders = [
-            "Season",
-            "Ginning Mill",
-            "Brand",
-            "Program",
-            "Expected Seed Cotton (KG)",
-            "Expected Lint in MT",
-          ];
-          if (!validateHeaders(excelHeaders, expectedHeaders)) {
-            setErrors((prevError: any) => ({
-              ...prevError,
-              upload: "Wrong Format.",
-            }));
-            return false;
-          } else {
-            setJsonStructure(convertedData);
-            if (convertedData.length === 0) {
-              setErrors((prevError: any) => ({
-                ...prevError,
-                upload: "The file you selected is empty",
-              }));
-              return false;
-            } else {
-              setErrors((prevError: any) => ({
-                ...prevError,
-                upload: "",
-              }));
-            }
-          }
-        }
+        //   const expectedHeaders = [
+        //     "Season",
+        //     "Ginning Mill",
+        //     "Brand",
+        //     "Program",
+        //     "Expected Seed Cotton (KG)",
+        //     "Expected Lint in MT",
+        //   ];
+        //   if (!validateHeaders(excelHeaders, expectedHeaders)) {
+        //     setErrors((prevError: any) => ({
+        //       ...prevError,
+        //       upload: "Wrong Format.",
+        //     }));
+        //     return false;
+        //   } else {
+        //     setJsonStructure(convertedData);
+        //     if (convertedData.length === 0) {
+        //       setErrors((prevError: any) => ({
+        //         ...prevError,
+        //         upload: "The file you selected is empty",
+        //       }));
+        //       return false;
+        //     } else {
+        //       setErrors((prevError: any) => ({
+        //         ...prevError,
+        //         upload: "",
+        //       }));
+        //     }
+        //   }
+        // }
 
-        if (selectedFileFormat === "styleMark") {
-          const newJsonStructure: any = jsonData.map((item: any) => ({
-            style_mark_no: String(item["style_mark_no"]),
-          }));
+        // if (selectedFileFormat === "styleMark") {
+        //   const newJsonStructure: any = jsonData.map((item: any) => ({
+        //     style_mark_no: String(item["style_mark_no"]),
+        //   }));
 
-          const expectedHeaders = ["id", "style_mark_no"];
-          if (!validateHeaders(excelHeaders, expectedHeaders)) {
-            setErrors((prevError: any) => ({
-              ...prevError,
-              upload: "Wrong Format.",
-            }));
-            return false;
-          } else {
-            setJsonStructure(newJsonStructure);
-            if (newJsonStructure.length === 0) {
-              setErrors((prevError: any) => ({
-                ...prevError,
-                upload: "The file you selected is empty",
-              }));
-              return false;
-            } else {
-              setErrors((prevError: any) => ({
-                ...prevError,
-                upload: "",
-              }));
-            }
-          }
-        }
+        //   const expectedHeaders = ["id", "style_mark_no"];
+        //   if (!validateHeaders(excelHeaders, expectedHeaders)) {
+        //     setErrors((prevError: any) => ({
+        //       ...prevError,
+        //       upload: "Wrong Format.",
+        //     }));
+        //     return false;
+        //   } else {
+        //     setJsonStructure(newJsonStructure);
+        //     if (newJsonStructure.length === 0) {
+        //       setErrors((prevError: any) => ({
+        //         ...prevError,
+        //         upload: "The file you selected is empty",
+        //       }));
+        //       return false;
+        //     } else {
+        //       setErrors((prevError: any) => ({
+        //         ...prevError,
+        //         upload: "",
+        //       }));
+        //     }
+        //   }
+        // }
 
         if (selectedFileFormat === "procurement") {
           const convertedData = jsonData.map((item: any) => ({
@@ -1490,9 +1494,10 @@ export default function page() {
             rate: item["Rate (INR/Kg)"],
             grade: item["Grade"],
             totalAmount: item["Total Amount"],
-            ginner: item["Ginner"],
+            mandi: item["Mandi"],
             vehicle: item["Transport Vehicle"],
             paymentMethod: item["Payment Method"],
+            riceVariety: item["Rice Variety"],
           }));
           convertedData.forEach((data: any) => {
             if (data.date) {
@@ -1514,328 +1519,10 @@ export default function page() {
             "Rate (INR/Kg)",
             "Grade",
             "Total Amount",
-            "Ginner",
+            "Mandi",
             "Transport Vehicle",
             "Payment Method",
-          ];
-          if (!validateHeaders(excelHeaders, expectedHeaders)) {
-            setErrors((prevError: any) => ({
-              ...prevError,
-              upload: "Wrong Format.",
-            }));
-            return false;
-          } else {
-            setJsonStructure(convertedData);
-            if (convertedData.length === 0) {
-              setErrors((prevError: any) => ({
-                ...prevError,
-                upload: "The file you selected is empty",
-              }));
-              return false;
-            } else {
-              setErrors((prevError: any) => ({
-                ...prevError,
-                upload: "",
-              }));
-            }
-          }
-        }
-
-        if (selectedFileFormat === "processor") {
-          const convertedData = jsonData.map((item: any) => ({
-            name: item["name"],
-            address: item["address"],
-          }));
-
-          const expectedHeaders = ["id", "name", "address"];
-          if (!validateHeaders(excelHeaders, expectedHeaders)) {
-            setErrors((prevError: any) => ({
-              ...prevError,
-              upload: "Wrong Format.",
-            }));
-            return false;
-          } else {
-            setJsonStructure(convertedData);
-            if (convertedData.length === 0) {
-              setErrors((prevError: any) => ({
-                ...prevError,
-                upload: "The file you selected is empty",
-              }));
-              return false;
-            } else {
-              setErrors((prevError: any) => ({
-                ...prevError,
-                upload: "",
-              }));
-            }
-          }
-        }
-
-        if (selectedFileFormat === "procurement_price") {
-          const convertedData = jsonData.map((item: any) => ({
-            transactionId: item["Transaction ID"],
-            oldPrice: item["Old Price"],
-            newPrice: item["New Price"],
-          }));
-
-          const expectedHeaders = ["Transaction ID", "Old Price", "New Price"];
-          if (!validateHeaders(excelHeaders, expectedHeaders)) {
-            setErrors((prevError: any) => ({
-              ...prevError,
-              upload: "Wrong Format.",
-            }));
-            return false;
-          } else {
-            setJsonStructure(convertedData);
-            if (convertedData.length === 0) {
-              setErrors((prevError: any) => ({
-                ...prevError,
-                upload: "The file you selected is empty",
-              }));
-              return false;
-            } else {
-              setErrors((prevError: any) => ({
-                ...prevError,
-                upload: "",
-              }));
-            }
-          }
-        }
-
-        if (selectedFileFormat === "impactData") {
-          const convertedData = jsonData.map((item: any) => ({
-            sNo: item["S.No"],
-            village: item["Village"],
-            reducedChemicalPesticide: item["Reduced chemical pesticide use by (%)"],
-            reducedChemicalFertilizer: item["Reduced chemical fertilizer use by (%)"],
-            reducedWater: item["Reduced water use by (%)"],
-            increasedYield: item["Increased yield by (%)"],
-            increasedInputCost: item["Reduced input costs by (%)"],
-            increasedProfit: item["Increased profit by (%)"]
-          }));
-
-          const expectedHeaders = [
-            "S.No",
-            "Village",
-            "Reduced chemical pesticide use by (%)",
-            "Reduced chemical fertilizer use by (%)",
-            "Reduced water use by (%)",
-            "Increased yield by (%)",
-            "Reduced input costs by (%)",
-            "Increased profit by (%)"
-          ];
-          if (!validateHeaders(excelHeaders, expectedHeaders)) {
-            setErrors((prevError: any) => ({
-              ...prevError,
-              upload: "Wrong Format.",
-            }));
-            return false;
-          } else {
-            setJsonStructure(convertedData);
-            if (convertedData.length === 0) {
-              setErrors((prevError: any) => ({
-                ...prevError,
-                upload: "The file you selected is empty",
-              }));
-              return false;
-            } else {
-              setErrors((prevError: any) => ({
-                ...prevError,
-                upload: "",
-              }));
-            }
-          }
-        }
-
-        if (selectedFileFormat === "farm_group_evaluation_data") {
-          const convertedData = jsonData.map((item: any) => ({
-            sNo: item["S.No"],
-            season: item["Season"],
-            agronomist_name: item["Name of the Agronomist"],
-            visit_from: item["Visit From"],
-            visit_to: item["Visit To"],
-            address: item["Address"],
-            registration_details: item["Registration Details"],
-            company_type: item["Type of Company"],
-            parent_company_name: item["Name of parent company"],
-            owner_name: item["Name of Owner/Directors/Trustees of Company"],
-            establishment_year: item["Establishment year of organization"],
-            district_project_presence: item["Districts where project has its presence"],
-            program_type_by_organization: item["Type of programs undertaken by organization"],
-            total_beneficiaries: item["Total beneficiaries with the programs"],
-            brand: item["Brand"],
-            farm_group_type: item["Farm group type(New/Existing)"],
-            farm_group: item["Farm Group"],
-            sustainable_cotton_program_type: item["Type of sustainable cotton programs undertaken"],
-            total_no_farmers_in_organic_cotton: item["Total number of farmers in organic cotton programs"],
-            program_wise_no_farmers_in_other_sustain_cotton_program: item["Program wise number of farmers in other sustainable cotton programs"],
-            total_number_of_current_ics: item["Total number of current ICS"],
-            cotton_variety_grown_in_program_areas: item["Cotton variety grown in program areas"],
-            state: item["State"],
-            district: item["District"],
-            block: item["Taluka/ Block"],
-            village: item["Village Name"],
-            no_of_farmers_met: item["Number of farmers met"],
-            scope_certificate_of_last_year_based_on_ics_score: (item["Scope certificates of last year based on the ICSs - score"] || "").toLowerCase() === "available" ? 1 : 0,
-            scope_certificate_of_last_year_based_on_ics_action: item["Scope certificates of last year based on the ICSs - action"],
-            farmer_field_dairy_score: (item["Farmer Field Diary or Organic Survey tools - score"] || "").toLowerCase() === "available" ? 1 : 0,
-            farmer_field_dairy_action: item["Farmer Field Diary or Organic Survey tools - action"],
-            farmer_training_attendence_register_score: (item["Farmer Training/Attendance Register - score"] || "").toLowerCase() === "available" ? 1 : 0,
-            farmer_training_attendence_register_action: item["Farmer Training/Attendance Register - action"],
-            demonstration_register_score: (item["Demonstration Register (optional) - score"] || "").toLowerCase() === "available" ? 1 : 0,
-            demonstration_register_action: item["Demonstration Register (optional) - action"],
-            farmers_are_aware_of_organization_score: (item["Farmers are aware of the organization - score"] || "").toLowerCase() === "available" ? 1 : 0,
-            farmers_are_aware_of_organization_remarks: item["Farmers are aware of the organization - remark"],
-            farmers_getting_support_of_any_kind_score: (item["Farmers getting support of any kind (trainings, inputs etc.) - score"] || "").toLowerCase() === "available" ? 1 : 0,
-            farmers_getting_support_of_any_kind_remarks: item["Farmers getting support of any kind (trainings, inputs etc.) - remark"],
-            frequency_of_selling_your_cotton_to_the_organization_score: (item["Frequency of selling your cotton to the organization - score"] || "").toLowerCase() === "always" ? 2 : (item["Frequency of selling your cotton to the organization - score"] || "").toLowerCase() === "sometimes" ? 1 : 0,
-            frequency_of_selling_your_cotton_to_the_organization_remarks: item["Frequency of selling your cotton to the organization - remark"],
-            farmers_associated_organic_program_score: (item["Are the farmers associated with Organic program - score"] || "").toLowerCase() === "available" ? 1 : 0,
-            farmers_associated_organic_program_remarks: item["Are the farmers associated with Organic program - remark"],
-            field_executive_support_by_imparing_knowledge_score: (item["Do the field executive support by imparting knowledge or providing suggestions to the farmers - score"] || "").toLowerCase() === "available" ? 1 : 0,
-            field_executive_support_by_imparing_knowledge_remarks: item["Do the field executive support by imparting knowledge or providing suggestions to the farmers - remark"],
-            farmers_knows_the_name_of_field_executive_score: (item["Do the farmers knows the name of the Field Executive of the ICS - score"] || "").toLowerCase() === "available" ? 1 : 0,
-            farmers_knows_the_name_of_field_executive_remarks: item["Do the farmers knows the name of the Field Executive of the ICS - remark"],
-            awareness_of_the_farmers_organic_practices_score: (item["Awareness of the farmers in organic practices - score"] || "").toLowerCase() === "high" ? 2 : (item["Awareness of the farmers in organic practices - score"] || "").toLowerCase() === "intermediate" ? 1 : 0,
-            awareness_of_the_farmers_organic_practices_remarks: item["Awareness of the farmers in organic practices - remark"],
-            awareness_of_the_farmers_regarding_organic_certification_score: (item["Awareness of the farmers regarding organic certification - score"] || "").toLowerCase() === "high" ? 2 : (item["Awareness of the farmers regarding organic certification - score"] || "").toLowerCase() === "intermediate" ? 1 : 0,
-            awareness_of_the_farmers_regarding_organic_certification_remarks: item["Awareness of the farmers regarding organic certification -remark"]
-          }));
-          convertedData.forEach((data: any) => {
-            if (data.visit_from) {
-              data.visit_from = convertNumericToDate(data.visit_from);
-            }
-            if (data.visit_to) {
-              data.visit_to = convertNumericToDate(data.visit_to);
-            }
-          });
-
-          const expectedHeaders = [
-            "S.No",
-            "Season",
-            "Name of the Agronomist",
-            "Visit From",
-            "Visit To",
-            "Address",
-            "Registration Details",
-            "Type of Company",
-            "Name of parent company",
-            "Name of Owner/Directors/Trustees of Company",
-            "Establishment year of organization",
-            "Districts where project has its presence",
-            "Type of programs undertaken by organization",
-            "Total beneficiaries with the programs",
-            "Brand",
-            "Farm group type(New/Existing)",
-            "Farm Group",
-            "Type of sustainable cotton programs undertaken",
-            "Total number of farmers in organic cotton programs",
-            "Program wise number of farmers in other sustainable cotton programs",
-            "Total number of current ICS",
-            "Cotton variety grown in program areas",
-            "State",
-            "District",
-            "Taluka/ Block",
-            "Village Name",
-            "Number of farmers met",
-            "Scope certificates of last year based on the ICSs - score",
-            "Scope certificates of last year based on the ICSs - action",
-            "Farmer Field Diary or Organic Survey tools - score",
-            "Farmer Field Diary or Organic Survey tools - action",
-            "Farmer Training/Attendance Register - score",
-            "Farmer Training/Attendance Register - action",
-            "Demonstration Register (optional) - score",
-            "Demonstration Register (optional) - action",
-            "Farmers are aware of the organization - score",
-            "Farmers are aware of the organization - remark",
-            "Farmers getting support of any kind (trainings, inputs etc.) - score",
-            "Farmers getting support of any kind (trainings, inputs etc.) - remark",
-            "Frequency of selling your cotton to the organization - score",
-            "Frequency of selling your cotton to the organization - remark",
-            "Are the farmers associated with Organic program - score",
-            "Are the farmers associated with Organic program - remark",
-            "Do the field executive support by imparting knowledge or providing suggestions to the farmers - score",
-            "Do the field executive support by imparting knowledge or providing suggestions to the farmers - remark",
-            "Do the farmers knows the name of the Field Executive of the ICS - score",
-            "Do the farmers knows the name of the Field Executive of the ICS - remark",
-            "Awareness of the farmers in organic practices - score",
-            "Awareness of the farmers in organic practices - remark",
-            "Awareness of the farmers regarding organic certification - score",
-            "Awareness of the farmers regarding organic certification -remark"
-          ];
-          if (!validateHeaders(excelHeaders, expectedHeaders)) {
-            setErrors((prevError: any) => ({
-              ...prevError,
-              upload: "Wrong Format.",
-            }));
-            return false;
-          } else {
-            setJsonStructure(convertedData);
-            if (convertedData.length === 0) {
-              setErrors((prevError: any) => ({
-                ...prevError,
-                upload: "The file you selected is empty",
-              }));
-              return false;
-            } else {
-              setErrors((prevError: any) => ({
-                ...prevError,
-                upload: "",
-              }));
-            }
-          }
-        }
-
-        if (selectedFileFormat === "ics_quantity_estimation") {
-          const convertedData = jsonData.map((item: any) => ({
-            sNo: item["S.No"],
-            season: item["Season"],
-            farm_group: item["Farm Group"],
-            ics_name: item["ICS Name"],
-            no_of_farmer: item["No.of farmers"],
-            total_area: item["Total Area (Ha)"],
-            est_cotton_area: item["Est. Cotton Area (Ha)"],
-            estimated_lint: item["Estimated Lint (MT)"],
-            verified_row_cotton: item["Verified volume by CB as per TC (RAW COTTON)"],
-            verified_ginner: item["Verified volume by CB as per TC (GINNER)"],
-            crop_current_season: item["Status for current season Crop (Organic/ NPOP/ IC2) - Add this in master"],
-            organic_standard: item["Organic standard NPOP/NOP"],
-            certification_body: item["Certification body"],
-            scope_issued_date: item["Scope Issued Date"],
-            scope_certification_validity: item["Scope certificate Validity / Lint avaibility in month"],
-            scope_certification_no: item["Scope Certificate No."],
-            nop_scope_certification_no: item["NOP Scope Certificate No."],
-            district: item["Dist."],
-            state: item["State"],
-            remark: item["Remark "]
-          }));
-          convertedData.forEach((data: any) => {
-            if (data.scope_issued_date) {
-              data.scope_issued_date = convertNumericToDate(data.scope_issued_date);
-            }
-          });
-
-          const expectedHeaders = [
-            "S.No",
-            "Season",
-            "Farm Group",
-            "ICS Name",
-            "No.of farmers",
-            "Total Area (Ha)",
-            "Est. Cotton Area (Ha)",
-            "Estimated Lint (MT)",
-            "Verified volume by CB as per TC (RAW COTTON)",
-            "Verified volume by CB as per TC (GINNER)",
-            "Status for current season Crop (Organic/ NPOP/ IC2) - Add this in master",
-            "Organic standard NPOP/NOP",
-            "Certification body",
-            "Scope Issued Date",
-            "Scope certificate Validity / Lint avaibility in month",
-            "Scope Certificate No.",
-            "NOP Scope Certificate No.",
-            "Dist.",
-            "State",
-            "Remark "
+            "Rice Variety",
           ];
 
           if (!validateHeaders(excelHeaders, expectedHeaders)) {
@@ -1861,177 +1548,497 @@ export default function page() {
           }
         }
 
-        if (selectedFileFormat === "seed_testing_linkage") {
-          const convertedData = jsonData.map((item: any) => ({
-            sNo: item["Sr No. "],
-            season: item["SEASON"],
-            seed_company_name: item["Seed Company Name - Add in master"],
-            lotno: item["Lot No."],
-            variety: item["Variety"],
-            packets: item["Available packets  (450 gm)"],
-            district: item["Location Dist."],
-            state: item["State"],
-            testing_code: item["Testing Code"],
-            seal_no: item["Seal No."],
-            date_sending_sample: item["Date of Sending Sample to LAB"],
-            date_of_report: item["Date Of  The Report "],
-            report_no: item["Test Report No."],
-            nos: item["NOS"],
-            thirtyfives: item["35 S"],
-            result_of_lab: item["Result of External Lab  (GMO)"],
-            lab_master_name: item["Name of  lab - Master"]
-          }));
-          convertedData.forEach((data: any) => {
-            if (data.date_sending_sample) {
-              data.date_sending_sample = convertNumericToDate(data.date_sending_sample);
-            }
-            if (data.date_of_report) {
-              data.date_of_report = convertNumericToDate(data.date_of_report);
-            }
-          });
+        // if (selectedFileFormat === "processor") {
+        //   const convertedData = jsonData.map((item: any) => ({
+        //     name: item["name"],
+        //     address: item["address"],
+        //   }));
 
-          const expectedHeaders = [
-            "Sr No. ",
-            "SEASON",
-            "Seed Company Name - Add in master",
-            "Lot No.",
-            "Variety",
-            "Available packets  (450 gm)",
-            "Location Dist.",
-            "State",
-            "Testing Code",
-            "Seal No.",
-            "Date of Sending Sample to LAB",
-            "Date Of  The Report ",
-            "Test Report No.",
-            "NOS",
-            "35 S",
-            "Result of External Lab  (GMO)",
-            "Name of  lab - Master"
-          ];
-          if (!validateHeaders(excelHeaders, expectedHeaders)) {
-            setErrors((prevError: any) => ({
-              ...prevError,
-              upload: "Wrong Format.",
-            }));
-            return false;
-          } else {
-            setJsonStructure(convertedData);
-            if (convertedData.length === 0) {
-              setErrors((prevError: any) => ({
-                ...prevError,
-                upload: "The file you selected is empty",
-              }));
-              return false;
-            } else {
-              setErrors((prevError: any) => ({
-                ...prevError,
-                upload: "",
-              }));
-            }
-          }
-        }
+        //   const expectedHeaders = ["id", "name", "address"];
+        //   if (!validateHeaders(excelHeaders, expectedHeaders)) {
+        //     setErrors((prevError: any) => ({
+        //       ...prevError,
+        //       upload: "Wrong Format.",
+        //     }));
+        //     return false;
+        //   } else {
+        //     setJsonStructure(convertedData);
+        //     if (convertedData.length === 0) {
+        //       setErrors((prevError: any) => ({
+        //         ...prevError,
+        //         upload: "The file you selected is empty",
+        //       }));
+        //       return false;
+        //     } else {
+        //       setErrors((prevError: any) => ({
+        //         ...prevError,
+        //         upload: "",
+        //       }));
+        //     }
+        //   }
+        // }
 
-        if (selectedFileFormat === "ics_name") {
-          const convertedData = jsonData.map((item: any) => ({
-            sNo: item["S.No"],
-            farm_group: item["Farm Group"],
-            ics_name: item["ICS Name"],
-            latitude: item["Latitude"],
-            longitude: item["Longitude"]
-          }));
+        // if (selectedFileFormat === "procurement_price") {
+        //   const convertedData = jsonData.map((item: any) => ({
+        //     transactionId: item["Transaction ID"],
+        //     oldPrice: item["Old Price"],
+        //     newPrice: item["New Price"],
+        //   }));
 
-          const expectedHeaders = [
-            "S.No",
-            "Farm Group",
-            "ICS Name",
-            "Latitude",
-            "Longitude"
-          ];
-          if (!validateHeaders(excelHeaders, expectedHeaders)) {
-            setErrors((prevError: any) => ({
-              ...prevError,
-              upload: "Wrong Format.",
-            }));
-            return false;
-          } else {
-            setJsonStructure(convertedData);
-            if (convertedData.length === 0) {
-              setErrors((prevError: any) => ({
-                ...prevError,
-                upload: "The file you selected is empty",
-              }));
-              return false;
-            } else {
-              setErrors((prevError: any) => ({
-                ...prevError,
-                upload: "",
-              }));
-            }
-          }
-        }
+        //   const expectedHeaders = ["Transaction ID", "Old Price", "New Price"];
+        //   if (!validateHeaders(excelHeaders, expectedHeaders)) {
+        //     setErrors((prevError: any) => ({
+        //       ...prevError,
+        //       upload: "Wrong Format.",
+        //     }));
+        //     return false;
+        //   } else {
+        //     setJsonStructure(convertedData);
+        //     if (convertedData.length === 0) {
+        //       setErrors((prevError: any) => ({
+        //         ...prevError,
+        //         upload: "The file you selected is empty",
+        //       }));
+        //       return false;
+        //     } else {
+        //       setErrors((prevError: any) => ({
+        //         ...prevError,
+        //         upload: "",
+        //       }));
+        //     }
+        //   }
+        // }
 
-        if (selectedFileFormat === "integrity_test") {
-          const convertedData = jsonData.map((item: any) => ({
-            sNo: item["Sr No"],
-            season: item["Season"],
-            date: item["Date"],
-            brand: item["Brand"],
-            stageOfTesting: item["Stage of Testing"],
-            typeOfTest: item["Type of Test"],
-            farmGroup: item["Farm Group"],
-            icsName: item["ICS Name"],
-            farmer: item["Farmer"],
-            sealNo: item["Seal No"],
-            tracenetId: item["Tracenet ID"],
-            sampleCodeNo: item["Sample Code No "],
-            seedLotNo: item["Seed Lot No "],
-            integrityScore: item["Integrity Score"]
-          }));
-          convertedData.forEach((data: any) => {
-            if (data.date) {
-              data.date = convertNumericToDate(data.date);
-            }
-          });
+        // if (selectedFileFormat === "impactData") {
+        //   const convertedData = jsonData.map((item: any) => ({
+        //     sNo: item["S.No"],
+        //     village: item["Village"],
+        //     reducedChemicalPesticide: item["Reduced chemical pesticide use by (%)"],
+        //     reducedChemicalFertilizer: item["Reduced chemical fertilizer use by (%)"],
+        //     reducedWater: item["Reduced water use by (%)"],
+        //     increasedYield: item["Increased yield by (%)"],
+        //     increasedInputCost: item["Reduced input costs by (%)"],
+        //     increasedProfit: item["Increased profit by (%)"]
+        //   }));
 
-          const expectedHeaders = [
-            "Sr No",
-            "Season",
-            "Date",
-            "Brand",
-            "Stage of Testing",
-            "Type of Test",
-            "Farm Group",
-            "ICS Name",
-            "Farmer",
-            "Seal No",
-            "Tracenet ID",
-            "Sample Code No ",
-            "Seed Lot No ",
-            "Integrity Score"
-          ];
-          if (!validateHeaders(excelHeaders, expectedHeaders)) {
-            setErrors((prevError: any) => ({
-              ...prevError,
-              upload: "Wrong Format.",
-            }));
-            return false;
-          } else {
-            setJsonStructure(convertedData);
-            if (convertedData.length === 0) {
-              setErrors((prevError: any) => ({
-                ...prevError,
-                upload: "The file you selected is empty",
-              }));
-              return false;
-            } else {
-              setErrors((prevError: any) => ({
-                ...prevError,
-                upload: "",
-              }));
-            }
-          }
-        }
+        //   const expectedHeaders = [
+        //     "S.No",
+        //     "Village",
+        //     "Reduced chemical pesticide use by (%)",
+        //     "Reduced chemical fertilizer use by (%)",
+        //     "Reduced water use by (%)",
+        //     "Increased yield by (%)",
+        //     "Reduced input costs by (%)",
+        //     "Increased profit by (%)"
+        //   ];
+        //   if (!validateHeaders(excelHeaders, expectedHeaders)) {
+        //     setErrors((prevError: any) => ({
+        //       ...prevError,
+        //       upload: "Wrong Format.",
+        //     }));
+        //     return false;
+        //   } else {
+        //     setJsonStructure(convertedData);
+        //     if (convertedData.length === 0) {
+        //       setErrors((prevError: any) => ({
+        //         ...prevError,
+        //         upload: "The file you selected is empty",
+        //       }));
+        //       return false;
+        //     } else {
+        //       setErrors((prevError: any) => ({
+        //         ...prevError,
+        //         upload: "",
+        //       }));
+        //     }
+        //   }
+        // }
+
+        // if (selectedFileFormat === "farm_group_evaluation_data") {
+        //   const convertedData = jsonData.map((item: any) => ({
+        //     sNo: item["S.No"],
+        //     season: item["Season"],
+        //     agronomist_name: item["Name of the Agronomist"],
+        //     visit_from: item["Visit From"],
+        //     visit_to: item["Visit To"],
+        //     address: item["Address"],
+        //     registration_details: item["Registration Details"],
+        //     company_type: item["Type of Company"],
+        //     parent_company_name: item["Name of parent company"],
+        //     owner_name: item["Name of Owner/Directors/Trustees of Company"],
+        //     establishment_year: item["Establishment year of organization"],
+        //     district_project_presence: item["Districts where project has its presence"],
+        //     program_type_by_organization: item["Type of programs undertaken by organization"],
+        //     total_beneficiaries: item["Total beneficiaries with the programs"],
+        //     brand: item["Brand"],
+        //     farm_group_type: item["Farm group type(New/Existing)"],
+        //     farm_group: item["Farm Group"],
+        //     sustainable_cotton_program_type: item["Type of sustainable cotton programs undertaken"],
+        //     total_no_farmers_in_organic_cotton: item["Total number of farmers in organic cotton programs"],
+        //     program_wise_no_farmers_in_other_sustain_cotton_program: item["Program wise number of farmers in other sustainable cotton programs"],
+        //     total_number_of_current_ics: item["Total number of current ICS"],
+        //     cotton_variety_grown_in_program_areas: item["Cotton variety grown in program areas"],
+        //     state: item["State"],
+        //     district: item["District"],
+        //     block: item["Taluka/ Block"],
+        //     village: item["Village Name"],
+        //     no_of_farmers_met: item["Number of farmers met"],
+        //     scope_certificate_of_last_year_based_on_ics_score: (item["Scope certificates of last year based on the ICSs - score"] || "").toLowerCase() === "available" ? 1 : 0,
+        //     scope_certificate_of_last_year_based_on_ics_action: item["Scope certificates of last year based on the ICSs - action"],
+        //     farmer_field_dairy_score: (item["Farmer Field Diary or Organic Survey tools - score"] || "").toLowerCase() === "available" ? 1 : 0,
+        //     farmer_field_dairy_action: item["Farmer Field Diary or Organic Survey tools - action"],
+        //     farmer_training_attendence_register_score: (item["Farmer Training/Attendance Register - score"] || "").toLowerCase() === "available" ? 1 : 0,
+        //     farmer_training_attendence_register_action: item["Farmer Training/Attendance Register - action"],
+        //     demonstration_register_score: (item["Demonstration Register (optional) - score"] || "").toLowerCase() === "available" ? 1 : 0,
+        //     demonstration_register_action: item["Demonstration Register (optional) - action"],
+        //     farmers_are_aware_of_organization_score: (item["Farmers are aware of the organization - score"] || "").toLowerCase() === "available" ? 1 : 0,
+        //     farmers_are_aware_of_organization_remarks: item["Farmers are aware of the organization - remark"],
+        //     farmers_getting_support_of_any_kind_score: (item["Farmers getting support of any kind (trainings, inputs etc.) - score"] || "").toLowerCase() === "available" ? 1 : 0,
+        //     farmers_getting_support_of_any_kind_remarks: item["Farmers getting support of any kind (trainings, inputs etc.) - remark"],
+        //     frequency_of_selling_your_cotton_to_the_organization_score: (item["Frequency of selling your cotton to the organization - score"] || "").toLowerCase() === "always" ? 2 : (item["Frequency of selling your cotton to the organization - score"] || "").toLowerCase() === "sometimes" ? 1 : 0,
+        //     frequency_of_selling_your_cotton_to_the_organization_remarks: item["Frequency of selling your cotton to the organization - remark"],
+        //     farmers_associated_organic_program_score: (item["Are the farmers associated with Organic program - score"] || "").toLowerCase() === "available" ? 1 : 0,
+        //     farmers_associated_organic_program_remarks: item["Are the farmers associated with Organic program - remark"],
+        //     field_executive_support_by_imparing_knowledge_score: (item["Do the field executive support by imparting knowledge or providing suggestions to the farmers - score"] || "").toLowerCase() === "available" ? 1 : 0,
+        //     field_executive_support_by_imparing_knowledge_remarks: item["Do the field executive support by imparting knowledge or providing suggestions to the farmers - remark"],
+        //     farmers_knows_the_name_of_field_executive_score: (item["Do the farmers knows the name of the Field Executive of the ICS - score"] || "").toLowerCase() === "available" ? 1 : 0,
+        //     farmers_knows_the_name_of_field_executive_remarks: item["Do the farmers knows the name of the Field Executive of the ICS - remark"],
+        //     awareness_of_the_farmers_organic_practices_score: (item["Awareness of the farmers in organic practices - score"] || "").toLowerCase() === "high" ? 2 : (item["Awareness of the farmers in organic practices - score"] || "").toLowerCase() === "intermediate" ? 1 : 0,
+        //     awareness_of_the_farmers_organic_practices_remarks: item["Awareness of the farmers in organic practices - remark"],
+        //     awareness_of_the_farmers_regarding_organic_certification_score: (item["Awareness of the farmers regarding organic certification - score"] || "").toLowerCase() === "high" ? 2 : (item["Awareness of the farmers regarding organic certification - score"] || "").toLowerCase() === "intermediate" ? 1 : 0,
+        //     awareness_of_the_farmers_regarding_organic_certification_remarks: item["Awareness of the farmers regarding organic certification -remark"]
+        //   }));
+        //   convertedData.forEach((data: any) => {
+        //     if (data.visit_from) {
+        //       data.visit_from = convertNumericToDate(data.visit_from);
+        //     }
+        //     if (data.visit_to) {
+        //       data.visit_to = convertNumericToDate(data.visit_to);
+        //     }
+        //   });
+
+        //   const expectedHeaders = [
+        //     "S.No",
+        //     "Season",
+        //     "Name of the Agronomist",
+        //     "Visit From",
+        //     "Visit To",
+        //     "Address",
+        //     "Registration Details",
+        //     "Type of Company",
+        //     "Name of parent company",
+        //     "Name of Owner/Directors/Trustees of Company",
+        //     "Establishment year of organization",
+        //     "Districts where project has its presence",
+        //     "Type of programs undertaken by organization",
+        //     "Total beneficiaries with the programs",
+        //     "Brand",
+        //     "Farm group type(New/Existing)",
+        //     "Farm Group",
+        //     "Type of sustainable cotton programs undertaken",
+        //     "Total number of farmers in organic cotton programs",
+        //     "Program wise number of farmers in other sustainable cotton programs",
+        //     "Total number of current ICS",
+        //     "Cotton variety grown in program areas",
+        //     "State",
+        //     "District",
+        //     "Taluka/ Block",
+        //     "Village Name",
+        //     "Number of farmers met",
+        //     "Scope certificates of last year based on the ICSs - score",
+        //     "Scope certificates of last year based on the ICSs - action",
+        //     "Farmer Field Diary or Organic Survey tools - score",
+        //     "Farmer Field Diary or Organic Survey tools - action",
+        //     "Farmer Training/Attendance Register - score",
+        //     "Farmer Training/Attendance Register - action",
+        //     "Demonstration Register (optional) - score",
+        //     "Demonstration Register (optional) - action",
+        //     "Farmers are aware of the organization - score",
+        //     "Farmers are aware of the organization - remark",
+        //     "Farmers getting support of any kind (trainings, inputs etc.) - score",
+        //     "Farmers getting support of any kind (trainings, inputs etc.) - remark",
+        //     "Frequency of selling your cotton to the organization - score",
+        //     "Frequency of selling your cotton to the organization - remark",
+        //     "Are the farmers associated with Organic program - score",
+        //     "Are the farmers associated with Organic program - remark",
+        //     "Do the field executive support by imparting knowledge or providing suggestions to the farmers - score",
+        //     "Do the field executive support by imparting knowledge or providing suggestions to the farmers - remark",
+        //     "Do the farmers knows the name of the Field Executive of the ICS - score",
+        //     "Do the farmers knows the name of the Field Executive of the ICS - remark",
+        //     "Awareness of the farmers in organic practices - score",
+        //     "Awareness of the farmers in organic practices - remark",
+        //     "Awareness of the farmers regarding organic certification - score",
+        //     "Awareness of the farmers regarding organic certification -remark"
+        //   ];
+        //   if (!validateHeaders(excelHeaders, expectedHeaders)) {
+        //     setErrors((prevError: any) => ({
+        //       ...prevError,
+        //       upload: "Wrong Format.",
+        //     }));
+        //     return false;
+        //   } else {
+        //     setJsonStructure(convertedData);
+        //     if (convertedData.length === 0) {
+        //       setErrors((prevError: any) => ({
+        //         ...prevError,
+        //         upload: "The file you selected is empty",
+        //       }));
+        //       return false;
+        //     } else {
+        //       setErrors((prevError: any) => ({
+        //         ...prevError,
+        //         upload: "",
+        //       }));
+        //     }
+        //   }
+        // }
+
+        // if (selectedFileFormat === "ics_quantity_estimation") {
+        //   const convertedData = jsonData.map((item: any) => ({
+        //     sNo: item["S.No"],
+        //     season: item["Season"],
+        //     farm_group: item["Farm Group"],
+        //     ics_name: item["ICS Name"],
+        //     no_of_farmer: item["No.of farmers"],
+        //     total_area: item["Total Area (Ha)"],
+        //     est_cotton_area: item["Est. Cotton Area (Ha)"],
+        //     estimated_lint: item["Estimated Lint (MT)"],
+        //     verified_row_cotton: item["Verified volume by CB as per TC (RAW COTTON)"],
+        //     verified_ginner: item["Verified volume by CB as per TC (GINNER)"],
+        //     crop_current_season: item["Status for current season Crop (Organic/ NPOP/ IC2) - Add this in master"],
+        //     organic_standard: item["Organic standard NPOP/NOP"],
+        //     certification_body: item["Certification body"],
+        //     scope_issued_date: item["Scope Issued Date"],
+        //     scope_certification_validity: item["Scope certificate Validity / Lint avaibility in month"],
+        //     scope_certification_no: item["Scope Certificate No."],
+        //     nop_scope_certification_no: item["NOP Scope Certificate No."],
+        //     district: item["Dist."],
+        //     state: item["State"],
+        //     remark: item["Remark "]
+        //   }));
+        //   convertedData.forEach((data: any) => {
+        //     if (data.scope_issued_date) {
+        //       data.scope_issued_date = convertNumericToDate(data.scope_issued_date);
+        //     }
+        //   });
+
+        //   const expectedHeaders = [
+        //     "S.No",
+        //     "Season",
+        //     "Farm Group",
+        //     "ICS Name",
+        //     "No.of farmers",
+        //     "Total Area (Ha)",
+        //     "Est. Cotton Area (Ha)",
+        //     "Estimated Lint (MT)",
+        //     "Verified volume by CB as per TC (RAW COTTON)",
+        //     "Verified volume by CB as per TC (GINNER)",
+        //     "Status for current season Crop (Organic/ NPOP/ IC2) - Add this in master",
+        //     "Organic standard NPOP/NOP",
+        //     "Certification body",
+        //     "Scope Issued Date",
+        //     "Scope certificate Validity / Lint avaibility in month",
+        //     "Scope Certificate No.",
+        //     "NOP Scope Certificate No.",
+        //     "Dist.",
+        //     "State",
+        //     "Remark "
+        //   ];
+
+        //   if (!validateHeaders(excelHeaders, expectedHeaders)) {
+        //     setErrors((prevError: any) => ({
+        //       ...prevError,
+        //       upload: "Wrong Format.",
+        //     }));
+        //     return false;
+        //   } else {
+        //     setJsonStructure(convertedData);
+        //     if (convertedData.length === 0) {
+        //       setErrors((prevError: any) => ({
+        //         ...prevError,
+        //         upload: "The file you selected is empty",
+        //       }));
+        //       return false;
+        //     } else {
+        //       setErrors((prevError: any) => ({
+        //         ...prevError,
+        //         upload: "",
+        //       }));
+        //     }
+        //   }
+        // }
+
+        // if (selectedFileFormat === "seed_testing_linkage") {
+        //   const convertedData = jsonData.map((item: any) => ({
+        //     sNo: item["Sr No. "],
+        //     season: item["SEASON"],
+        //     seed_company_name: item["Seed Company Name - Add in master"],
+        //     lotno: item["Lot No."],
+        //     variety: item["Variety"],
+        //     packets: item["Available packets  (450 gm)"],
+        //     district: item["Location Dist."],
+        //     state: item["State"],
+        //     testing_code: item["Testing Code"],
+        //     seal_no: item["Seal No."],
+        //     date_sending_sample: item["Date of Sending Sample to LAB"],
+        //     date_of_report: item["Date Of  The Report "],
+        //     report_no: item["Test Report No."],
+        //     nos: item["NOS"],
+        //     thirtyfives: item["35 S"],
+        //     result_of_lab: item["Result of External Lab  (GMO)"],
+        //     lab_master_name: item["Name of  lab - Master"]
+        //   }));
+        //   convertedData.forEach((data: any) => {
+        //     if (data.date_sending_sample) {
+        //       data.date_sending_sample = convertNumericToDate(data.date_sending_sample);
+        //     }
+        //     if (data.date_of_report) {
+        //       data.date_of_report = convertNumericToDate(data.date_of_report);
+        //     }
+        //   });
+
+        //   const expectedHeaders = [
+        //     "Sr No. ",
+        //     "SEASON",
+        //     "Seed Company Name - Add in master",
+        //     "Lot No.",
+        //     "Variety",
+        //     "Available packets  (450 gm)",
+        //     "Location Dist.",
+        //     "State",
+        //     "Testing Code",
+        //     "Seal No.",
+        //     "Date of Sending Sample to LAB",
+        //     "Date Of  The Report ",
+        //     "Test Report No.",
+        //     "NOS",
+        //     "35 S",
+        //     "Result of External Lab  (GMO)",
+        //     "Name of  lab - Master"
+        //   ];
+        //   if (!validateHeaders(excelHeaders, expectedHeaders)) {
+        //     setErrors((prevError: any) => ({
+        //       ...prevError,
+        //       upload: "Wrong Format.",
+        //     }));
+        //     return false;
+        //   } else {
+        //     setJsonStructure(convertedData);
+        //     if (convertedData.length === 0) {
+        //       setErrors((prevError: any) => ({
+        //         ...prevError,
+        //         upload: "The file you selected is empty",
+        //       }));
+        //       return false;
+        //     } else {
+        //       setErrors((prevError: any) => ({
+        //         ...prevError,
+        //         upload: "",
+        //       }));
+        //     }
+        //   }
+        // }
+
+        // if (selectedFileFormat === "ics_name") {
+        //   const convertedData = jsonData.map((item: any) => ({
+        //     sNo: item["S.No"],
+        //     farm_group: item["Farm Group"],
+        //     ics_name: item["ICS Name"],
+        //     latitude: item["Latitude"],
+        //     longitude: item["Longitude"]
+        //   }));
+
+        //   const expectedHeaders = [
+        //     "S.No",
+        //     "Farm Group",
+        //     "ICS Name",
+        //     "Latitude",
+        //     "Longitude"
+        //   ];
+        //   if (!validateHeaders(excelHeaders, expectedHeaders)) {
+        //     setErrors((prevError: any) => ({
+        //       ...prevError,
+        //       upload: "Wrong Format.",
+        //     }));
+        //     return false;
+        //   } else {
+        //     setJsonStructure(convertedData);
+        //     if (convertedData.length === 0) {
+        //       setErrors((prevError: any) => ({
+        //         ...prevError,
+        //         upload: "The file you selected is empty",
+        //       }));
+        //       return false;
+        //     } else {
+        //       setErrors((prevError: any) => ({
+        //         ...prevError,
+        //         upload: "",
+        //       }));
+        //     }
+        //   }
+        // }
+
+        // if (selectedFileFormat === "integrity_test") {
+        //   const convertedData = jsonData.map((item: any) => ({
+        //     sNo: item["Sr No"],
+        //     season: item["Season"],
+        //     date: item["Date"],
+        //     brand: item["Brand"],
+        //     stageOfTesting: item["Stage of Testing"],
+        //     typeOfTest: item["Type of Test"],
+        //     farmGroup: item["Farm Group"],
+        //     icsName: item["ICS Name"],
+        //     farmer: item["Farmer"],
+        //     sealNo: item["Seal No"],
+        //     tracenetId: item["Tracenet ID"],
+        //     sampleCodeNo: item["Sample Code No "],
+        //     seedLotNo: item["Seed Lot No "],
+        //     integrityScore: item["Integrity Score"]
+        //   }));
+        //   convertedData.forEach((data: any) => {
+        //     if (data.date) {
+        //       data.date = convertNumericToDate(data.date);
+        //     }
+        //   });
+
+        //   const expectedHeaders = [
+        //     "Sr No",
+        //     "Season",
+        //     "Date",
+        //     "Brand",
+        //     "Stage of Testing",
+        //     "Type of Test",
+        //     "Farm Group",
+        //     "ICS Name",
+        //     "Farmer",
+        //     "Seal No",
+        //     "Tracenet ID",
+        //     "Sample Code No ",
+        //     "Seed Lot No ",
+        //     "Integrity Score"
+        //   ];
+        //   if (!validateHeaders(excelHeaders, expectedHeaders)) {
+        //     setErrors((prevError: any) => ({
+        //       ...prevError,
+        //       upload: "Wrong Format.",
+        //     }));
+        //     return false;
+        //   } else {
+        //     setJsonStructure(convertedData);
+        //     if (convertedData.length === 0) {
+        //       setErrors((prevError: any) => ({
+        //         ...prevError,
+        //         upload: "The file you selected is empty",
+        //       }));
+        //       return false;
+        //     } else {
+        //       setErrors((prevError: any) => ({
+        //         ...prevError,
+        //         upload: "",
+        //       }));
+        //     }
+        //   }
+        // }
       }
     }
   };
@@ -2080,17 +2087,6 @@ export default function page() {
                   </div>
                   <div className="flex items-center">
                     <button
-                      name="organic_farmer"
-                      type="button"
-                      onClick={() => handleFile("organic_farmer")}
-                      className="bg-orange-400 flex text-sm rounded text-white px-2 py-1.5"
-                    >
-                      <FaDownload className="mr-2" />
-                      Organic Farmer Format
-                    </button>
-                  </div>
-                  <div className="flex items-center">
-                    <button
                       name="procurement"
                       type="button"
                       onClick={() => handleFile("procurement")}
@@ -2098,171 +2094,6 @@ export default function page() {
                     >
                       <FaDownload className="mr-2" />
                       Procurement Format
-                    </button>
-                  </div>
-                  <div className="flex items-center">
-                    <button
-                      name="villageData"
-                      type="button"
-                      onClick={() => handleFile("villageData")}
-                      className="bg-orange-400 flex text-sm rounded text-white px-2 py-1.5"
-                    >
-                      <FaDownload className="mr-2" />
-                      Village Format
-                    </button>
-                  </div>
-                  <div className="flex items-center">
-                    <button
-                      name="garmentType"
-                      type="button"
-                      onClick={() => handleFile("garmentType")}
-                      className="bg-orange-400 flex text-sm rounded text-white px-2 py-1.5"
-                    >
-                      <FaDownload className="mr-2" />
-                      Garment Type Format
-                    </button>
-                  </div>
-                  <div className="flex items-center">
-                    <button
-                      type="button"
-                      name="styleMark"
-                      onClick={() => handleFile("styleMark")}
-                      className="bg-orange-400 flex text-sm rounded text-white px-2 py-1.5"
-                    >
-                      <FaDownload className="mr-2" />
-                      Style/Mark No Format
-                    </button>
-                  </div>
-                  <div className="flex items-center">
-                    <button
-                      type="button"
-                      name="processor"
-                      onClick={() => handleFile("processor")}
-                      className="bg-orange-400 flex text-sm rounded text-white px-2 py-1.5"
-                    >
-                      <FaDownload className="mr-2" />
-                      Processor List Format
-                    </button>
-                  </div>
-                  <div className="flex items-center">
-                    <button
-                      type="button"
-                      name="procurement_price"
-                      onClick={() => handleFile("procurement_price")}
-                      className="bg-orange-400 flex text-sm rounded text-white px-2 py-1.5"
-                    >
-                      <FaDownload className="mr-2" />
-                      Procurement Price Update Format
-                    </button>
-                  </div>
-                  <div className="flex items-center">
-                    <button
-                      type="button"
-                      name="ginnerExpectedSeed"
-                      onClick={() => handleFile("ginnerExpectedSeed")}
-                      className="bg-orange-400 flex text-sm rounded text-white px-2 py-1.5"
-                    >
-                      <FaDownload className="mr-2" />
-                      Ginner expected Steel Cotton Data
-                    </button>
-                  </div>
-                  <div className="flex items-center">
-                    <button
-                      name="ginnerOrder"
-                      type="button"
-                      onClick={() => handleFile("ginnerOrder")}
-                      className="bg-orange-400 flex text-sm rounded text-white px-2 py-1.5"
-                    >
-                      <FaDownload className="mr-2" />
-                      Ginner Order in Hand
-                    </button>
-                  </div>
-                  <div className='flex items-center'>
-                    <button
-                      name='impact_data'
-                      type="button"
-                      onClick={() => handleFile('impactData')}
-                      className="bg-orange-400 flex text-sm rounded text-white px-2 py-1.5"
-                    >
-                      <FaDownload className='mr-2' />
-                      Impact Data Format
-                    </button>
-                  </div>
-                  <div className="flex items-center">
-                    <button
-                      name="farm_group_evaluation_data"
-                      type="button"
-                      onClick={() => handleFile("farm_group_evaluation_data")}
-                      className="bg-orange-400 flex text-sm rounded text-white px-2 py-1.5"
-                    >
-                      <FaDownload className="mr-2" />
-                      Farm Group Evaluation Data Format
-                    </button>
-                  </div>
-                  <div className="flex items-center">
-                    <button
-                      name="ics_quantity_estimation"
-                      type="button"
-                      onClick={() => handleFile("ics_quantity_estimation")}
-                      className="bg-orange-400 flex text-sm rounded text-white px-2 py-1.5"
-                    >
-                      <FaDownload className="mr-2" />
-                      ICS Quantity Estimation Format
-                    </button>
-                  </div>
-                  <div className="flex items-center">
-                    <button
-                      name="seed_testing_linkage"
-                      type="button"
-                      onClick={() => handleFile("seed_testing_linkage")}
-                      className="bg-orange-400 flex text-sm rounded text-white px-2 py-1.5"
-                    >
-                      <FaDownload className="mr-2" />
-                      Seed Testing and Linkage Format
-                    </button>
-                  </div>
-                  <div className="flex items-center">
-                    <button
-                      name="seed_demand"
-                      type="button"
-                      onClick={() => handleFile("seed_demand")}
-                      className="bg-orange-400 flex text-sm rounded text-white px-2 py-1.5"
-                    >
-                      <FaDownload className="mr-2" />
-                      Seed Demand Format
-                    </button>
-                  </div>
-                  <div className="flex items-center">
-                    <button
-                      name="seed_availability"
-                      type="button"
-                      onClick={() => handleFile("seed_availability")}
-                      className="bg-orange-400 flex text-sm rounded text-white px-2 py-1.5"
-                    >
-                      <FaDownload className="mr-2" />
-                      Seed Availability Format
-                    </button>
-                  </div>
-                  <div className="flex items-center">
-                    <button
-                      name="ics_name"
-                      type="button"
-                      onClick={() => handleFile("ics_name")}
-                      className="bg-orange-400 flex text-sm rounded text-white px-2 py-1.5"
-                    >
-                      <FaDownload className="mr-2" />
-                      ICS Name Format
-                    </button>
-                  </div>
-                  <div className="flex items-center">
-                    <button
-                      name="integrity_test"
-                      type="button"
-                      onClick={() => handleFile("integrity_test")}
-                      className="bg-orange-400 flex text-sm rounded text-white px-2 py-1.5"
-                    >
-                      <FaDownload className="mr-2" />
-                      Integrity Test Format
                     </button>
                   </div>
                 </div>
@@ -2330,18 +2161,18 @@ export default function page() {
               {(
                 selectedFileFormat === "" ||
                 selectedFileFormat === "farmers" ||
-                selectedFileFormat === "organic_farmer" ||
-                selectedFileFormat === "procurement" ||
-                selectedFileFormat === "garmentType" ||
-                selectedFileFormat === "styleMark" ||
-                selectedFileFormat === "processor" ||
-                selectedFileFormat === "ginnerExpectedSeed" ||
-                selectedFileFormat === "ginnerOrder"
+                // selectedFileFormat === "organic_farmer" ||
+                selectedFileFormat === "procurement" 
+                // selectedFileFormat === "garmentType" ||
+                // selectedFileFormat === "styleMark" ||
+                // selectedFileFormat === "processor" ||
+                // selectedFileFormat === "ginnerExpectedSeed" ||
+                // selectedFileFormat === "ginnerOrder"
               ) && (
                   <>
                     {
-                      selectedFileFormat !== "procurement" &&
-                      selectedFileFormat !== "ginnerExpectedSeed" && (
+                      selectedFileFormat !== "procurement" && (
+                      // selectedFileFormat !== "ginnerExpectedSeed" && (
                         <div className="row">
                           <div className="col-lg-6 col-md-6 col-sm-12 mb-2">
                             <label className="text-gray-500 text-[12px] font-medium">
@@ -2452,126 +2283,6 @@ export default function page() {
                   </>
                 )
               }
-
-              {selectedFileFormat === "villageData" && (
-                <>
-                  <div className="row">
-                    <div className="col-lg-6 col-md-6 col-sm-12 mb-2">
-                      <label className="text-gray-500 text-[12px] font-medium">
-                        Country *
-                      </label>
-                      <Select
-                        name="country"
-                        value={villageFormat.country ? { label: country?.find((county: any) => county.id === villageFormat.country)?.county_name, value: villageFormat.country } : null}
-                        menuShouldScrollIntoView={false}
-                        isClearable
-                        placeholder="Select a Country"
-                        className="dropDownFixes rounded-md formDropDown mt-1 text-sm borderBottom"
-                        options={(country || []).map(({ id, county_name }: any) => ({
-                          label: county_name,
-                          value: id,
-                          key: id
-                        }))}
-                        onChange={(item: any) => {
-                          handleChange("country", item?.value);
-                        }}
-                      />
-                      {errors.country && (
-                        <p className="text-red-500  text-sm mt-1">
-                          {errors.country}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-
-                  <div className="row">
-                    <div className="col-lg-6 col-md-6 col-sm-12 mb-2">
-                      <label className="text-gray-500 text-[12px] font-medium">
-                        State *
-                      </label>
-                      <Select
-                        name="state"
-                        value={villageFormat.state ? { label: state?.find((state: any) => state.id === villageFormat.state)?.state_name, value: villageFormat.state } : null}
-                        menuShouldScrollIntoView={false}
-                        isClearable
-                        placeholder="Select State"
-                        className="dropDownFixes rounded-md formDropDown mt-1 text-sm borderBottom"
-                        options={(state || []).map(({ id, state_name }: any) => ({
-                          label: state_name,
-                          value: id,
-                          key: id
-                        }))}
-                        onChange={(item: any) => {
-                          handleChange("state", item?.value);
-                        }}
-                      />
-                      {errors.state && (
-                        <p className="text-red-500  text-sm mt-1">
-                          {errors.state}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-
-                  <div className="row">
-                    <div className="col-lg-6 col-md-6 col-sm-12 mb-2">
-                      <label className="text-gray-500 text-[12px] font-medium">
-                        District *
-                      </label>
-                      <Select
-                        name="district"
-                        value={villageFormat.district ? { label: districts?.find((district: any) => district.id === villageFormat.district)?.district_name, value: villageFormat.district } : null}
-                        menuShouldScrollIntoView={false}
-                        isClearable
-                        placeholder="Select District"
-                        className="dropDownFixes rounded-md formDropDown mt-1 text-sm borderBottom"
-                        options={(districts || []).map(({ id, district_name }: any) => ({
-                          label: district_name,
-                          value: id,
-                          key: id
-                        }))}
-                        onChange={(item: any) => {
-                          handleChange("district", item?.value);
-                        }}
-                      />
-                      {errors.district && (
-                        <p className="text-red-500  text-sm mt-1">
-                          {errors.district}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-
-                  <div className="row">
-                    <div className="col-lg-6 col-md-6 col-sm-12 mb-2">
-                      <label className="text-gray-500 text-[12px] font-medium">
-                        Block/Taluk *
-                      </label>
-                      <Select
-                        name="taluk"
-                        value={villageFormat.taluk ? { label: blocks?.find((taluk: any) => taluk.id === villageFormat.taluk)?.block_name, value: villageFormat.taluk } : null}
-                        menuShouldScrollIntoView={false}
-                        isClearable
-                        placeholder="Select Block/Taluk"
-                        className="dropDownFixes rounded-md formDropDown mt-1 text-sm borderBottom"
-                        options={(blocks || []).map(({ id, block_name }: any) => ({
-                          label: block_name,
-                          value: id,
-                          key: id
-                        }))}
-                        onChange={(item: any) => {
-                          handleChange("taluk", item?.value);
-                        }}
-                      />
-                      {errors.taluk && (
-                        <p className="text-red-500  text-sm mt-1">
-                          {errors.taluk}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                </>
-              )}
 
               <div className="row">
                 <div className="col-lg-6 col-md-6 col-sm-12 mb-2">
