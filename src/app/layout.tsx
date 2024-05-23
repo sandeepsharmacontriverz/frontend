@@ -194,26 +194,3 @@ export default function RootLayout({
     );
   }
 }
-
-export async function getStaticProps() {
-  // Example data fetching
-  const metaData = {
-    title: "Rice Traceability | Dashboard",
-    description: "sffdfsf",
-    ogTitle: "tracebale",
-    ogDescription: "I'm superman",
-    ogUrl: "https://newtraceable.com/",
-    ogImage: "https://images.unsplash.com/photo-1715698576283-d6ee92b7157a?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    twitterTitle: "tracebale",
-    twitterDescription: "I'm superman",
-    twitterSite: "@lighter_app",
-    twitterImage: "https://images.unsplash.com/photo-1715698576283-d6ee92b7157a?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    twitterCreator: "@lighter_app"
-  };
-
-  return {
-    props: {
-      metaData,
-    },
-  };
-}
