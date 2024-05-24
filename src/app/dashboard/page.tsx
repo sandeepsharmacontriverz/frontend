@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import NavLink from "@components/core/nav-link";
-import Head from "next/head";
 import useRole from "@hooks/useRole";
 import useTitle from "@hooks/useTitle";
 import useTranslations from "@hooks/useTranslation";
@@ -140,20 +139,6 @@ export default function dashboard() {
   if (!roleLoading && hasAccess?.role?.userCategory?.category_name?.toLowerCase() === "superadmin" || hasAccess?.role?.userCategory?.category_name?.toLowerCase() === "admin") {
     return (
       <>
-        <Head>
-        <title>Rice Traceability | Dashboard</title>
-        <meta name="description" content="sffdfsf" />
-        <meta property="og:title" content="tracebale" />
-        <meta property="og:description" content="I'm superman" />
-        <meta property="og:url" content="https://frontend-eta-ebon-62.vercel.app/dashboard" />
-        <meta property="og:image" content="https://frontend-eta-ebon-62.vercel.app/images/cottonconnect.png" />
-        <meta name="twitter:title" content="tracebale" />
-        <meta name="twitter:description" content="I'm superman" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@lighter_app" />
-        <meta name="twitter:image" content="https://frontend-eta-ebon-62.vercel.app/images/cottonconnect.png" />
-        <meta name="twitter:creator" content="@lighter_app" />
-      </Head>
       <div>
         <div className="breadcrumb-box">
           <div className="breadcrumb-inner light-bg">
