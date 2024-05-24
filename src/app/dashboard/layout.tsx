@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     url: 'https://frontend-eta-ebon-62.vercel.app/dashboard',
     images: [
       {
-        url: 'https://frontend-eta-ebon-62.vercel.app/images/cottonconnect.png',
+        url: 'https://frontend-five-vert-52.vercel.app/images/cottonconnect.png',
         alt: 'Rice Traceability'
       }
     ]
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description: "Your Description",
     images: [
       {
-        url: 'https://frontend-eta-ebon-62.vercel.app/images/cottonconnect.png',
+        url: 'https://frontend-five-vert-52.vercel.app/images/cottonconnect.png',
         alt: 'Rice Traceability'
       }
     ]
